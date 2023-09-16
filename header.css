@@ -1,0 +1,225 @@
+/* Temel stil */
+:root {
+    --primary-color: #00476F;
+    /* Ana renk */
+    --secondary-color: #00AEEE;
+    /* İkincil renk */
+    --background-color: #FFFFFF;
+    /* Arka plan rengi */
+    --header-text-color: #282828;
+    /*Başlıktaki menü rengi*/
+    --text-color: #537480;
+    /* Metin rengi */
+    --link-color: #007BFF;
+    /* Bağlantı rengi */
+    --font-light: 300;
+    /* Light (hafif) yazı tipi ağırlığı */
+    --font-regular: 400;
+    /* Regular (normal) yazı tipi ağırlığı */
+    --font-medium: 500;
+    /* Medium (orta) yazı tipi ağırlığı */
+    --font-semibold: 600;
+    /* Semibold (yarım kalın) yazı tipi ağırlığı */
+    --font-bold: 700;
+    /* Bold (kalın) yazı tipi ağırlığı */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    color: var(--header-text-color);
+    margin-top: -10px;
+    padding: 1% 2%; /* % olarak padding kullanımı */
+}
+
+.logo img{
+    margin-left: 3%;
+    width: 75px;
+    min-width: 70px;
+    height: auto;
+}
+
+.menu-icon {
+    display: none;
+    margin-top: -4px;
+    /* Başlangıçta menü simgesini gizle */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 3px 2px;
+}
+
+.toggle-menu {
+    display: none;
+    /* Başlangıçta toggle menüyü gizle */
+    position: absolute;
+    top: 0;
+    right: -40%;
+    /* Ekranın %40'u kadar kaydırılmış */
+    height: 100vh;
+    /* Ekran yüksekliği kadar */
+    width: 40%;
+    /* Ekranın %40'u kadar genişlik */
+    background-color: var(--primary-color);
+    color: #fff;
+    transition: right 0.3s;
+    /* Animasyon için geçiş süresi ekler */
+}
+
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+nav ul.menu {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    margin-left: -10%;
+}
+
+nav ul.menu li a {
+    text-decoration: none;
+    color: var(--header-text-color);
+    letter-spacing: 0.09rem;
+    font-weight: var(--font-semibold);
+    font-size: 0.75rem;
+}
+
+nav ul.menu li a.activePage {
+    text-decoration: none;
+    color: var(--secondary-color);
+    letter-spacing: 0.09rem;
+    font-weight: var(--font-semibold);
+    font-size: 0.75rem;
+}
+
+/* Diğer stiller burada yer alır */
+
+.flags {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    /* Bayrakları sağa hizala */
+}
+
+.flags a {
+    display: inline-block;
+    border-radius: 50%;
+    /* Dairesel şekil için border-radius kullanın */
+}
+
+.flags img {
+    width: 30px;
+    height: 30px;
+    /* Beyaz bir kenarlık ekleyebilirsiniz */
+    border-radius: 50%;
+    /* Bayrağı daire şeklinde yapar */
+}
+
+/* Mobil düzenlemeler */
+@media screen and (max-width: 675px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--background-color);
+        color: var(--header-text-color);
+        margin-top: 3px;
+        padding: 1% 2%;
+        /* % olarak padding kullanımı */
+    }
+    .logo {
+        order: 1;
+        /* Logo, menü ikonunun önüne gelir */
+    }
+
+    .menu-icon {
+        display: flex;
+        /* Mobilde menü simgesini göster */
+        order: 3;
+        /* Menü simgesi, logonun arkasına gelir */
+    }
+    .toggle-menu {
+        display: block;
+        /* Mobilde toggle menüyü göster */
+        /* Ekranın sağ tarafından sola kaydır */
+    }
+    .toggle-menu ul {
+        list-style: none;
+        margin-top: 35%;
+        line-height: 2.7;
+    }
+
+    .toggle-menu ul li a{
+        text-decoration: none;
+        color: var(--background-color);
+        letter-spacing: 0.09rem;
+        font-weight: var(--font-medium);
+        font-size: 0.75rem;
+    }
+
+    .toggle-menu ul li a.activePage {
+        text-decoration: none;
+        color: var(--secondary-color);
+        letter-spacing: 0.09rem;
+        font-weight: var(--font-medium);
+        font-size: 0.75rem;
+    }
+
+    .close-icon {
+        display: block;
+        /* Mobilde kapatma ikonunu göster */
+    }
+    .flags {
+        order: 2;
+        /* Bayraklar, menü ikonunun arkasına gelir */
+        margin-left: 48%;
+    }
+
+    .logo img {
+        margin-left: 3%;
+        width: 60px;
+        min-width: 50px;
+        height: auto;
+    }
+
+    nav {
+        display: none;
+        /* Menüyü gizle */
+        background-color: #666666;
+        position: absolute;
+        top: 10px;
+        right: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    nav.active {
+        display: flex;
+        /* Menüyü mobilde göster */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu.active li {
+        padding: 10px;
+        text-align: center;
+    }
+}

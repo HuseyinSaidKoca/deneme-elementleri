@@ -1,0 +1,229 @@
+:root {
+    --primary-color: #00476F;
+    /* Ana renk */
+    --secondary-color: #00AEEE;
+    /* İkincil renk */
+    --light-background-color: #d4e6f2a4;
+    /*mavi tonlu arkaplan rengi*/
+    --background-color: #FFFFFF;
+    /* Arka plan rengi */
+    --header-text-color: #282828;
+    /*Başlıktaki menü rengi*/
+    --text-color: #537480;
+    /* Metin rengi */
+    --link-color: #007BFF;
+    /* Bağlantı rengi */
+    --font-light: 300;
+    /* Light (hafif) yazı tipi ağırlığı */
+    --font-regular: 400;
+    /* Regular (normal) yazı tipi ağırlığı */
+    --font-medium: 500;
+    /* Medium (orta) yazı tipi ağırlığı */
+    --font-semibold: 600;
+    /* Semibold (yarım kalın) yazı tipi ağırlığı */
+    --font-bold: 700;
+    /* Bold (kalın) yazı tipi ağırlığı */
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* Temel stil */
+.container {
+    display: flex;
+    flex-direction: column;
+    /* Mobilde dikey sıralama */
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    /* Elemanları yatayda sağa ve sola hizala */
+}
+
+.element {
+    flex: 1;
+    /* İstediğiniz minimum genişlik */
+    margin: 5px;
+    /* İstediğiniz boşluk miktarı */
+    background-color: var(--background-color);
+}
+
+.hero {
+    flex: 1;
+    font-weight: var(--font-medium);
+    padding: 5%;
+    background-color: var(--background-color);
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+}
+
+h1 {
+    margin-top: -1%;
+    font-size: 5.2vw;
+    white-space: nowrap;
+}
+
+p {
+    margin-top: -9%;
+    font-size: 2.1vw;
+    color: var(--secondary-color);
+    white-space: nowrap;
+}
+
+.cta-button {
+    background: linear-gradient(to right, var(--secondary-color), #0075B6);
+    color: #fff;
+    padding: 0.6rem 1.9rem;
+    border: none;
+    border-radius: 0.6rem;
+    font-family: Poppins;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    font-weight: var(--font-semibold);
+    cursor: pointer;
+    left: 25%; /* Sol kenarı yatayda sayfanın ortasına getirir */
+    margin-top: 17%;
+}
+
+/* Sağ yarısı */
+.right-content {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Overlay için ortak stil */
+/* Üst katman için stil */
+.overlay-box {
+    position: absolute;
+    top: 10%;
+    min-width: 100px;
+    right: 10%;
+    /* Sol kenardan %10 ötelemek için */
+    width: 100%;
+    /* Sağ kenara %10 ötelemek için */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: none;
+    /* Overlay arkaplanını kaldırın */
+    z-index: 1;
+    /* Overlay'i üst katmanda görüntülemek için */
+}
+
+/* Alt katman için stil */
+.rectangle {
+    min-width: 100px;
+    width: 70%;
+    height: 80%;
+    position: absolute;
+    border-radius: 2vw;
+    z-index: 0;
+    /* Dikdörtgenleri alt katmanda görüntülemek için */
+    background-color: var(--light-background-color);
+    /* Dikdörtgenlerin opaklığını %50 yapar */
+}
+
+/* Dikdörtgenleri overlap yapmak için pozisyon ayarı */
+.rectangle:nth-child(odd) {
+    left: 13%;
+    /* Sağ yarının sol kenarına yerleştirir */
+}
+
+.rectangle:nth-child(even) {
+    right: 13%;
+    top: 5%;
+    /* Sağ yarının sağ kenarına yerleştirir */
+}
+
+/* Görsel */
+img {
+    min-width: 100px;
+    width: 65%;
+    margin-left: 18%;
+    height: auto;
+    object-fit: cover;
+    z-index: 2;
+    /* Resmi üst katmanda görüntülemek için */
+}
+
+/* Ekran genişliği 768 piksel veya daha küçükse, sıralamayı değiştir */
+@media screen and (max-width: 675px) {
+    .row {
+        flex-direction: column;
+        /* Dikey sıralamaya geç */
+    }
+    .row:nth-child(1) {
+        flex-direction: column-reverse;
+        /* İkinci satırdaki elementlerin sıralamasını ters çevir */
+    }
+    .hero {
+        flex: 1;
+        padding: 0%;
+        background-color: var(--background-color);
+        text-align: center;
+        color: var(--primary-color);
+    }
+    .right-content {
+        position: relative;
+        width: 100%;
+        /* Mobilde tam genişlik */
+        /* Dikeyde herhangi bir üst boşluk kaldırılıyor */
+    }
+    h1 {
+        margin-top: -1%;
+        font-size: 9vw;
+        font-weight: var(--font-bold);
+        white-space: nowrap;
+    }
+
+    p {
+        margin-top: -9%;
+        font-size: 4.7vw;
+        color: var(--secondary-color);
+        white-space: nowrap;
+    }
+    .cta-button {
+        margin-top: 6%;
+    }
+    /* Üst katman için stil (overlay-box) */
+    .overlay-box {
+        position: static;
+        /* Normal akışa dönüş */
+        width: 100%;
+        align-items: center;
+        /* Mobilde tam genişlik */
+    }
+    .rectangle:nth-child(odd) {
+        left: 17.5%;
+        /* Sağ yarının sol kenarına yerleştirir */
+    }
+
+    .rectangle:nth-child(even) {
+        right: 17.5%;
+        top: 5%;
+        /* Sağ yarının sağ kenarına yerleştirir */
+    }
+    /* Alt katman için stil (rectangle) */
+    .rectangle {
+        width: 60%;
+        height: 70%;
+        position: absolute;
+        border-radius: 3.7rem;
+        /* Dikeyde herhangi bir üst boşluk kaldırılıyor */
+    }
+    img {
+        min-width: 100px;
+        width: 60%;
+        height: auto;
+        object-fit: cover;
+        z-index: 2;
+        /* Resmi üst katmanda görüntülemek için */
+    }
+}
