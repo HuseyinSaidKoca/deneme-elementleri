@@ -77,15 +77,15 @@ p {
 .cta-button {
     background: linear-gradient(to right, var(--secondary-color), #0075B6);
     color: #fff;
-    padding: 0.6rem 1.9rem;
+    padding: 0.7vw 2.6vw;
     border: none;
-    border-radius: 0.6rem;
+    border-radius: 0.8vw;
     font-family: Poppins;
-    letter-spacing: 0.1rem;
-    font-size: 1rem;
+    letter-spacing: 0.1vw;
+    margin-left: 14.5vw;
+    font-size: 1.2vw;
     font-weight: var(--font-semibold);
     cursor: pointer;
-    left: 25%; /* Sol kenarı yatayda sayfanın ortasına getirir */
     margin-top: 17%;
 }
 
@@ -123,7 +123,7 @@ p {
     width: 70%;
     height: 80%;
     position: absolute;
-    border-radius: 2vw;
+    border-radius: 2.5vw;
     z-index: 0;
     /* Dikdörtgenleri alt katmanda görüntülemek için */
     background-color: var(--light-background-color);
@@ -145,10 +145,12 @@ p {
 /* Görsel */
 img {
     min-width: 100px;
-    width: 65%;
-    margin-left: 18%;
+    width: 70%;
+    margin-top: -11%;
+    margin-left: 17%;
     height: auto;
     object-fit: cover;
+    overflow:visible;
     z-index: 2;
     /* Resmi üst katmanda görüntülemek için */
 }
@@ -190,7 +192,18 @@ img {
         white-space: nowrap;
     }
     .cta-button {
-        margin-top: 6%;
+        background: linear-gradient(to right, var(--secondary-color), #0075B6);
+        color: #fff;
+        padding: 2.1vw 6.1vw;
+        border: none;
+        border-radius: 3vw;
+        font-family: Poppins;
+        margin-left: 0vw;
+        letter-spacing: 0.1vw;
+        font-size: 3.5vw;
+        font-weight: var(--font-semibold);
+        cursor: pointer;
+        margin-top: 4%;
     }
     /* Üst katman için stil (overlay-box) */
     .overlay-box {
