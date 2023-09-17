@@ -87,8 +87,11 @@ p {
     font-weight: var(--font-semibold);
     cursor: pointer;
     margin-top: 17%;
+    transition: box-shadow 0.5s ease;
 }
-
+.cta-button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
 /* Sağ yarısı */
 .right-content {
     flex: 1;
@@ -143,7 +146,7 @@ p {
 }
 
 /* Görsel */
-img {
+.overlay-box img {
     min-width: 100px;
     width: 70%;
     margin-top: -11%;
@@ -155,14 +158,73 @@ img {
     /* Resmi üst katmanda görüntülemek için */
 }
 
+.row-team {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+}
+
+.team-img{
+    width: 31.7vw;
+    height: 38.9vw;
+    object-fit: cover;
+    object-position: 60% 0;
+    border-radius: 1.3vw;
+    margin-left: 6.5vw;
+    margin-right: 8vw;
+}
+
+.team-text{
+    align-items: center;
+    text-align: left;
+    width: 45vw;
+}
+
+.team-text h2 {
+    font-size: 3.35vw;
+    line-height: 4.2vw;
+    color: var(--primary-color);
+    font-weight: var(--font-semibold);
+    margin-bottom: 6vw;
+}
+.team-text p{
+    font-size: 1vw;
+    font-weight: var(--font-medium);
+    color: var(--text-color);
+    line-height: 1.9vw;
+    width: 31vw;
+    text-wrap: wrap;
+}
+
+.about-us-button{
+    background: linear-gradient(to right, var(--secondary-color), #0075B6);
+    color: #fff;
+    padding: 0.7vw 2vw;
+    border: none;
+    border-radius: 0.8vw;
+    font-family: Poppins;
+    letter-spacing: 0.1vw;
+    font-size: 1vw;
+    font-weight: var(--font-semibold);
+    cursor: pointer;
+    margin-top: 2.5vw;
+    transition: box-shadow 0.5s ease;
+}
+
+.about-us-button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
 /* Ekran genişliği 768 piksel veya daha küçükse, sıralamayı değiştir */
 @media screen and (max-width: 675px) {
     .row {
-        flex-direction: column;
+        flex-direction: column-reverse;
+        margin-top: 7vw;
         /* Dikey sıralamaya geç */
     }
-    .row:nth-child(1) {
-        flex-direction: column-reverse;
+    .row-team {
+        flex-direction: column;
         /* İkinci satırdaki elementlerin sıralamasını ters çevir */
     }
     .hero {
@@ -232,7 +294,7 @@ img {
         border-radius: 13vw;
         /* Dikeyde herhangi bir üst boşluk kaldırılıyor */
     }
-    img {
+    .overlay-box img {
         min-width: 100px;
         width: 60%;
         margin-top: -8%;
@@ -241,5 +303,60 @@ img {
         object-fit: cover;
         z-index: 2;
         /* Resmi üst katmanda görüntülemek için */
+    }
+
+    .row-team {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        margin-top: 15vw;
+        margin-bottom: 15vw;
+    }
+
+    .team-img {
+        width: 40vw;
+        height: 49.1vw;
+        object-fit: cover;
+        object-position: 60% 0;
+        border-radius: 2.5vw;
+        margin-left: 6.5vw;
+        margin-right: 8vw;
+    }
+
+    .team-text {
+        align-items: center;
+        text-align: left;
+        width: 80vw;
+    }
+
+    .team-text h2 {
+        font-size: 5.4vw;
+        line-height: 6.5vw;
+        color: var(--primary-color);
+        margin-bottom: 8.5vw;
+    }
+
+    .team-text p {
+        font-size: 3.6vw;
+        line-height: 6vw;
+        color: var(--text-color);
+        width: 72vw;
+        text-wrap: wrap;
+    }
+
+    .about-us-button {
+        background: linear-gradient(to right, var(--secondary-color), #0075B6);
+        color: #fff;
+        padding: 1.5vw 4.3vw;
+        margin-left: 26.5vw;
+        border: none;
+        border-radius: 1.8vw;
+        font-family: Poppins;
+        letter-spacing: 0.1vw;
+        font-size: 2.5vw;
+        font-weight: var(--font-semibold);
+        cursor: pointer;
+        margin-top: 0.5vw;
+        transition: box-shadow 0.5s ease;
     }
 }
