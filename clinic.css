@@ -1,0 +1,93 @@
+:root {
+    --primary-color: #00476F;
+    /* Ana renk */
+    --secondary-color: #00AEEE;
+    /* İkincil renk */
+    --light-background-color: #d4e6f2a4;
+    /*mavi tonlu arkaplan rengi*/
+    --background-color: #FFFFFF;
+    /* Arka plan rengi */
+    --header-text-color: #282828;
+    /*Başlıktaki menü rengi*/
+    --text-color: #537480;
+    /* Metin rengi */
+    --link-color: #007BFF;
+    /* Bağlantı rengi */
+    --font-light: 300;
+    /* Light (hafif) yazı tipi ağırlığı */
+    --font-regular: 400;
+    /* Regular (normal) yazı tipi ağırlığı */
+    --font-medium: 500;
+    /* Medium (orta) yazı tipi ağırlığı */
+    --font-semibold: 600;
+    /* Semibold (yarım kalın) yazı tipi ağırlığı */
+    --font-bold: 700;
+    /* Bold (kalın) yazı tipi ağırlığı */
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.clinic{
+    flex-direction: column;
+    height: 40vw;
+    background-color: var(--light-background-color);
+    justify-content: center;
+    align-items: center;
+}
+/* Galeri başlığının stilini güncelle */
+.gallery-header {
+    text-align: center;
+    padding: 20px 0;
+    /* Başlık ile resimler arasına boşluk ekledik */
+}
+
+
+/* Galeri stilini güncelle, iki sütun ve iki satır olacak şekilde ayarla */
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    /* Diğer stiller */
+}
+
+.left-content {
+    padding: 0.5vw;
+    /* Sol içerik stilini güncelle */
+}
+
+.left-content img{
+    width: 33vw;
+    height: 33vw;
+    object-fit: cover;
+    border-radius: 1vw;
+}
+.right-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Resimler arasındaki boşluk */
+    /* Sağ içerik stilini güncelle */
+}
+
+/* Her resmin stilini güncelle */
+.gallery-item {
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 16.1vw;
+    height: 16.1vw;
+    object-fit: cover;
+    border-color: #FFFFFF;
+    border-radius: 1vw;
+    /* İstediğiniz köşe yuvarlama */
+    padding: 0.2vw 0.4vw;
+    /* Resimlerin yüksekliğini 100% olarak ayarla */
+}
+
+@media screen and (max-width: 675px) {
+
+}
