@@ -1,0 +1,332 @@
+:root {
+    --primary-color: #004870;
+    /* Ana renk */
+    --secondary-color: #00AEEE;
+    /* İkincil renk */
+    --light-background-color: #d4e6f2a4;
+    /*mavi tonlu arkaplan rengi*/
+    --background-color: #FFFFFF;
+    /* Arka plan rengi */
+    --header-text-color: #282828;
+    /*Başlıktaki menü rengi*/
+    --text-color: #537480;
+    /* Metin rengi */
+    --link-color: #007BFF;
+    /* Bağlantı rengi */
+    --font-light: 300;
+    /* Light (hafif) yazı tipi ağırlığı */
+    --font-regular: 400;
+    /* Regular (normal) yazı tipi ağırlığı */
+    --font-medium: 500;
+    /* Medium (orta) yazı tipi ağırlığı */
+    --font-semibold: 600;
+    /* Semibold (yarım kalın) yazı tipi ağırlığı */
+    --font-bold: 700;
+    /* Bold (kalın) yazı tipi ağırlığı */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.service-section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    color: var(--primary-color);
+    height: 80vh;
+    /* Sayfanın tamamına yayılmak için */
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.2vw;
+    /* Kutular arasındaki boşluk */
+    margin-bottom: 0.6vw;
+    margin-left: 13vw;
+}
+
+.row.medium{
+    display: none;
+    justify-content: center;
+    gap: 2.1vw;
+    /* Kutular arasındaki boşluk */
+    margin-bottom: 2.1vw;
+    
+}
+.box {
+    display: flex;
+    flex-direction: row;
+    width: 7vw;
+    height: 3.3vw;
+    align-items: center;
+    /* Satırda 4 kutu olacak şekilde */
+    text-decoration: none;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    /* Arkaplan rengi */
+    border: 0.14vw solid #DFDFDF;
+    border-radius: 0.5vw;
+    /* Gri kenarlık */
+    padding: 0.4vw 2.5vw;
+    text-align: left;
+    cursor: pointer;
+    transition: box-shadow 0.8s ease, background-color 0.8s ease,
+        color 0.8s ease;
+    /*yavaş bir geçiş için*/
+}
+
+.box:hover img{
+    filter: brightness(0) invert(1);
+    /*ikonları kutu üstüne gelindiğinde beyaz yap*/
+}
+
+.box:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        /* Yavaş geçişli gölge efekti */
+        
+    color: var(--background-color);
+    background-color: var(--primary-color);
+    /*kutunun üstüne geindiğinde renk değişimi*/
+}
+
+.icon {
+    margin-left: -1.2vw;
+    width: 3.6vw;
+    height: auto;
+    transition: filter 0.8s ease;
+}
+
+.icon.smile{
+    margin-left: -1.5vw;
+    width: 3.6vw;
+    height: auto;
+}
+
+.icon.beyazlatma {
+    margin-left: -1.2vw;
+    width: 2.7vw;
+    height: auto;
+}
+.icon.estetik {
+    margin-left: -1.2vw;
+    width: 2.7vw;
+    height: auto;
+}
+.icon.kaplama {
+    margin-left: -1.2vw;
+    width: 3.2vw;
+    height: auto;
+}
+.icon.implant {
+    margin-left: -1vw;
+    width: 2.7vw;
+    height: auto;
+}
+.icon.dis_eti {
+    margin-left: -1.6vw;
+    width: 3.6vw;
+    height: auto;
+}
+.icon.cene {
+    margin-left: -1.1vw;
+    width: 2.8vw;
+    height: auto;
+}
+.icon.dis_sikma {
+    margin-left: -1.5vw;
+    width: 3.6vw;
+    height: auto;
+}
+.text {
+    /*box texts*/
+    width: 5.1vw;
+    margin-left: 2.8vw;
+    font-weight:var(--font-semibold);
+    font-size: 1vw;
+    position: absolute;
+}
+
+.services-header{
+    font-size: 3vw;
+    color: var(--primary-color);
+}
+
+.team-text {
+    display: none;
+    flex-direction: column;
+    align-items:center;
+    margin-left: 0vw;
+    width: 60vw;
+}
+
+.team-text h2 {
+    border-bottom: 0.1vw solid var(--primary-color);
+    display: inline-block;
+    padding: 0 20px 6px;
+    text-align: center;
+    font-size: 1.7vw;
+    line-height: 2vw;
+    color: var(--primary-color);
+    font-weight: var(--font-semibold);
+    margin-bottom: 0vw;
+}
+
+.description {
+    text-align: left;
+    font-size: 1.1vw;
+    font-weight: var(--font-medium);
+    color: var(--primary-color);
+    line-height: 1.8vw;
+    width: 50vw;
+    text-wrap: wrap;
+}
+
+/* Mobil düzenlemeler */
+@media screen and (max-width: 675px) {
+    .container{
+        flex-direction: column;
+    }
+    .row{
+        display: none;
+        margin-left: 0;
+    }
+    .row.medium{
+        flex-direction: row;
+        display: flex;
+    }
+    .box {
+        display: flex;
+        flex-direction: row;
+        width: 38vw;
+        height: 13vw;
+        align-items: center;
+        /* Satırda 4 kutu olacak şekilde */
+        text-decoration: none;
+        color: var(--primary-color);
+        background-color: var(--background-color);
+        /* Arkaplan rengi */
+        border: 0.5vw solid #DFDFDF;
+        border-radius: 3vw;
+        /* Gri kenarlık */
+        padding: 0.4vw 2.5vw;
+        text-align: left;
+        transition: box-shadow 0.8s ease, background-color 0.8s ease,
+            color 0.8s ease;
+        /*yavaş bir geçiş için*/
+    }
+
+    .icon {
+        margin-left: 0.6vw;
+        width: 8vw;
+        height: auto;
+        transition: filter 0.8s ease;
+    }
+
+    .icon.smile {
+        margin-left: 0.6vw;
+        width: 12.125vw;
+        height: auto;
+    }
+
+    .icon.beyazlatma {
+        margin-left: 1vw;
+        width: 9.7vw;
+        height: auto;
+    }
+
+    .icon.estetik {
+        margin-left: 1vw;
+        width: 9.7vw;
+        height: auto;
+    }
+
+    .icon.kaplama {
+        margin-left: 1vw;
+        width: 11.048vw;
+        height: auto;
+    }
+
+    .icon.implant {
+        margin-left: 1.2vw;
+        width: 9.7vw;
+        height: auto;
+    }
+
+    .icon.dis_eti {
+        margin-left: 0vw;
+        width: 12.125vw;
+        height: auto;
+    }
+
+    .icon.cene {
+        margin-left: 1.3vw;
+        width: 9.97vw;
+        height: auto;
+    }
+
+    .icon.dis_sikma {
+        margin-left: 0.2vw;
+        width: 12.125vw;
+        height: auto;
+    }
+
+    .text {
+        width: 20vw;
+        margin-left: 15vw;
+        font-weight: var(--font-semibold);
+        font-size: 3.3vw;
+        position: absolute;
+    }
+
+    .services-header {
+        font-size: 6vw;
+        color: var(--primary-color);
+    }
+
+    .team-text {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 3vw;
+        width: 100%;
+        padding-bottom: 8vw;
+    }
+
+    .team-text h2 {
+        border-bottom: 0.1vw solid var(--primary-color);
+        display: inline-block;
+        padding: 0 20px 2.5vw;
+        text-align: center;
+        font-size: 4vw;
+        line-height: 2vw;
+        color: var(--primary-color);
+        font-weight: var(--font-semibold);
+        margin-top: 7vw;
+        margin-left: -5.8vw;
+        margin-bottom: 0vw;
+    }
+
+    .description {
+        text-align: left;
+        font-size: 3vw;
+        font-weight: var(--font-medium);
+        color: var(--primary-color);
+        line-height: 4vw;
+        margin-left: -3vw;
+        width: 80vw;
+        text-wrap: wrap;
+    }
+}
