@@ -1,0 +1,228 @@
+:root {
+    --primary-color: #00476F;
+    /* Ana renk */
+    --secondary-color: #00AEEE;
+    /* İkincil renk */
+    --light-background-color: #d4e6f2a4;
+    /*mavi tonlu arkaplan rengi*/
+    --background-color: #FFFFFF;
+    /* Arka plan rengi */
+    --header-text-color: #282828;
+    /*Başlıktaki menü rengi*/
+    --text-color: #537480;
+    /* Metin rengi */
+    --footer-color:#DBDBDB
+    /*footer border rengi*/
+    --link-color: #007BFF;
+    /* Bağlantı rengi */
+    --font-light: 300;
+    /* Light (hafif) yazı tipi ağırlığı */
+    --font-regular: 400;
+    /* Regular (normal) yazı tipi ağırlığı */
+    --font-medium: 500;
+    /* Medium (orta) yazı tipi ağırlığı */
+    --font-semibold: 600;
+    /* Semibold (yarım kalın) yazı tipi ağırlığı */
+    --font-bold: 700;
+    /* Bold (kalın) yazı tipi ağırlığı */
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.contact{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 70vw;
+    height: 60vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    margin-left: 13.5vw;
+}
+
+.contact-image{
+    /*resim*/
+    object-fit: cover;
+    height: 19.6vw;
+    border-radius: 1.3vw 1.3vw 0px 0px;
+}
+
+.info{
+    /*resmin altındaki tüm bölüm*/
+    height: 34vw;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.form{
+    /*form kısmı*/
+    height: 34vw;
+    width: 25.5vw;
+    background-color: var(--light-background-color);
+    color: var(--primary-color);
+    border-radius: 0px 0px 0px 1.3vw;
+    padding: 0.1vw 3.5vw;
+    align-items: baseline;
+    text-align: left;
+    
+}
+
+.contact-info-container{
+    display: flex;
+    flex-direction: column;
+    height: 38.5vw;
+    width: 34.5vw;
+    background-color: var(--background-color);
+    padding: 2.5vw 4.5vw;
+    text-align: left;
+}
+
+.contact-header {
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    text-align: left;
+    font-size: 2vw;
+    font-weight: var(--font-semibold);
+    margin-bottom: 0.2vw
+}
+
+.divider {
+    width: 5vw;
+    height: 0.15vw;
+    background-color: var(--primary-color);
+    margin: 0 0.8vw;
+}
+
+.contact-info {
+    color: var(--primary-color);
+    width: 23vw;
+    text-align: left;
+    font-size: 1.3vw;
+    font-weight: var(--font-semibold);
+}
+
+.info-item {
+    display: flex;
+    margin-bottom: 0.7vw;
+    align-items: center;
+    letter-spacing: 0.05vw;
+}
+
+.info-item:nth-child(1) {
+    display: flex;
+    margin-bottom: 0.7vw;
+    align-items: flex-start;
+}
+
+.info-icon {
+    margin-right: 0.7vw;
+    margin-left: 0.3vw;
+}
+
+.info-item:nth-child(1) .info-icon i {
+    font-size: 2.2vw;
+    /* Adres ikon boyutu */
+}
+
+.info-item:nth-child(2) .info-icon i {
+    font-size: 2.1vw;
+    /* Whatsapp ikon boyutu */
+}
+
+.info-item:nth-child(3) .info-icon i {
+    font-size: 1.8vw;
+    /* Mail ikon boyutu */
+}
+
+.info-text p {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.form-header {
+    display: flex;
+    font-size: 3.5vw;
+    font-weight: var(--font-semibold);
+    color: var(--primary-color);
+    margin-top: 2vw;
+    margin-bottom: 1.5vw;
+}
+
+.form-group {
+    text-align: left;
+    position: relative;
+    margin-bottom: 1vw;
+    /* Label'ları üst katman olarak konumlandırmak için */
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    font-size: 1vw;
+    color: var(--primary-color);
+    position: absolute;
+    /* Label'ları üst katman olarak konumlandırmak için */
+    top: -1.4vw;
+    /* Label'ları text box'ın üstünde göstermek için yukarı kaydırın */
+    left: 0.6vw;
+    /* Label'ları sola hizalamak için */
+    background-color: transparent;
+    /* Arka planı temizlemek için */
+    padding: 0.6vw 5px;
+    /* Label'ları daha okunaklı hale getirmek için boşluk ekleyin */
+    transition: top 0.3s ease;
+    /* Geçiş efekti ekleyin */
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+    width: 22.2vw;
+    height: 1.8vw;
+    background-color: transparent;
+    padding: 10px;
+    font-weight: var(--font-semibold);
+    border: 0.2vw solid var(--background-color);
+    border-radius: 0.6vw;
+}
+
+/* Label'ların aktif durumunda yukarı kaydırmasını sağlayın */
+.form-group input:focus+label,
+.form-group input:valid+label {
+    font-family: "Poppins", sans-serif;
+    font-weight: var(--font-semibold);
+    color: var(--primary-color);
+    border-color: var(--background-color);
+    top: -20px;
+    font-size: 1vw;
+    /* İsteğe bağlı olarak daha küçük bir yazı tipi ekleyebilirsiniz */
+}
+
+.form-group button {
+    background: linear-gradient(to right, var(--secondary-color), #0075B6);
+    color: #fff;
+    padding: 0.7vw 4vw;
+    border: none;
+    border-radius: 0.8vw;
+    font-family: Poppins;
+    letter-spacing: 0.1vw;
+    margin-left: 5.1vw;
+    font-size: 1.2vw;
+    font-weight: var(--font-semibold);
+    cursor: pointer;
+    margin-top: 2.5vw;
+    transition: box-shadow 0.5s ease;
+}
+
+.form-group button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+@media screen and (max-width: 675px) {
+    
+}
