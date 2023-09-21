@@ -47,7 +47,6 @@ footer {
     /* İçerikleri sola ve sağa yay */
     align-items: center;
     /* İçerikleri dikey olarak hizala */
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -72,7 +71,7 @@ footer {
     /* Logo ile marka ismi arasındaki boşluk */
 }
 
-.marka-ismi {
+.footer-marka-ismi {
     font-weight: var(--font-bold);
     /* Marka ismini kalın yap */
 }
@@ -98,7 +97,6 @@ footer {
         /* İçerikleri sola ve sağa yay */
         align-items: center;
         /* İçerikleri dikey olarak hizala */
-        position: fixed;
         left: 0;
         bottom: 0;
         width: 100%;
@@ -123,7 +121,7 @@ footer {
         /* Logo ile marka ismi arasındaki boşluk */
     }
 
-    .marka-ismi {
+    .footer-marka-ismi {
         font-weight: var(--font-bold);
         /* Marka ismini kalın yap */
     }

@@ -33,16 +33,18 @@ body {
     margin: 0;
 }
 
-.row-team {
+
+/*     !ABOUT US SECTION!       */
+.row-about {
     display: flex;
     align-items: flex-start;
     justify-content: center;
     text-align: left;
     margin-top: 3vw;
-    margin-bottom: 3vw;
+    margin-bottom: 5vw;
 }
 
-.team-img {
+.about-img {
     width: 33.8vw;
     height: 39vw;
     object-fit: cover;
@@ -52,13 +54,13 @@ body {
     margin-right: 3vw;
 }
 
-.team-text {
+.about-text {
     align-items: baseline;
     text-align: left;
     width: 45vw;
 }
 
-.team-text h2 {
+.about-text h2 {
     font-size: 4.9vw;
     color: var(--primary-color);
     font-weight: var(--font-semibold);
@@ -66,7 +68,7 @@ body {
     margin-top: -0.5vw;
 }
 
-.team-text h1 {
+.about-text h1 {
     font-size: 2vw;
     color: var(--secondary-color);
     font-weight: var(--font-semibold);
@@ -75,7 +77,7 @@ body {
     margin-bottom: 1vw;
 }
 
-.team-text p {
+.about-text p {
     font-size: 1.3vw;
     font-weight: var(--font-medium);
     color: var(--text-color);
@@ -84,17 +86,132 @@ body {
     text-wrap: wrap;
 }
 
+/*     !CLINIC SECTION!        */
+.clinic {
+    flex: 1;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--light-background-color);
+    text-align: center;
+    padding-bottom: 2.2vw;
+    margin-top: 1vw;
+
+}
+
+/* Galeri başlığının stilini güncelle */
+.gallery-header {
+    color: var(--primary-color);
+    font-size: 1.5vw;
+    padding: 0.1vw 0vw;
+    line-height: 2vw;
+    /* Başlık ile resimler arasına boşluk ekledik */
+}
+
+
+.content {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-content {
+    padding: 0vw 0.4vw;
+    /* Sol içerik stilini güncelle */
+}
+
+.left-content img {
+    width: 33vw;
+    height: 33vw;
+    object-fit: cover;
+    border-radius: 1vw;
+}
+
+.right-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Galeri stilini güncelle, iki sütun ve iki satır olacak şekilde ayarla */
+}
+
+/* BAŞLIĞI ORTALA */
+.gallery-item {
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 16.1vw;
+    height: 16.1vw;
+    object-fit: cover;
+    border-color: #FFFFFF;
+    border-radius: 1vw;
+    /* İstediğiniz köşe yuvarlama */
+    padding: 0.2vw 0.4vw;
+}
+
+/*      !FOOTER SECTION!      */
+/* Footerı stilize etmek için CSS kuralları */
+footer {
+    background-color: var(--background-color);
+    /* Footer arkaplan rengi */
+    color: var(--primary-color);
+    /* Metin rengi */
+    border-top: 1px solid lightgray;
+    display: flex;
+    flex-direction: row;
+    /* İçerikleri yatay olarak hizalar */
+    justify-content: space-between;
+    /* İçerikleri sola ve sağa yay */
+    align-items: center;
+    /* İçerikleri dikey olarak hizala */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4.2vw;
+    font-size: 1.4vw
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 3vw;
+}
+
+.footer-left img {
+    width: 4vw;
+    /* Logo resmi genişliği */
+    height: auto;
+    /* Otomatik yükseklik ayarla */
+    margin-right: 0.2vw;
+    margin-bottom: 0.2vw;
+    /* Logo ile marka ismi arasındaki boşluk */
+}
+
+.footer-marka-ismi {
+    font-weight: var(--font-bold);
+    /* Marka ismini kalın yap */
+}
+
+.footer-right p {
+    font-weight: var(--font-bold);
+    margin-right: 2vw;
+    /* Paragrafın içerikten boşluğunu kaldır */
+}
+
+/*      !MOBİL DÜZENLEME!       */
 @media screen and (max-width: 675px) {
-    .row-team {
+    /*      !ABOUT US SECTION!        */
+    .row-about {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
         text-align: left;
         margin-top: 7vw;
-        margin-bottom: 7vw;
+        margin-bottom: 12vw;
     }
 
-    .team-img {
+    .about-img {
         width: 80vw;
         height: 55vw;
         object-fit: cover;
@@ -103,20 +220,20 @@ body {
         margin-right: 8vw;
     }
 
-    .team-text {
+    .about-text {
         align-items: center;
         text-align: center;
         width: 80vw;
     }
 
-    .team-text h2 {
+    .about-text h2 {
         font-size: 9vw;
         line-height: 6.5vw;
         color: var(--primary-color);
         margin-bottom: 2vw;
     }
 
-    .team-text h1 {
+    .about-text h1 {
         font-size: 4vw;
         color: var(--secondary-color);
         font-weight: var(--font-semibold);
@@ -125,13 +242,131 @@ body {
         margin-bottom: 1.5vw;
     }
 
-    .team-text p {
+    .about-text p {
         font-size: 3.6vw;
         line-height: 6vw;
         color: var(--text-color);
         width: 80vw;
         text-align: justify;
         text-wrap: wrap;
-        margin-bottom: 5vw;
+        margin-bottom: 7vw;
+    }
+    /*      !CLINIC SECTION!        */
+    .content {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .clinic {
+        flex: 1;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--light-background-color);
+        text-align: center;
+        padding-bottom: 7vw;
+        margin-top: 6vw;
+    }
+
+    /* Galeri başlığının stilini güncelle */
+    .gallery-header {
+        color: var(--primary-color);
+        font-size: 4.5vw;
+        padding: 0.1vw 0vw;
+        line-height: 5vw;
+        /* Başlık ile resimler arasına boşluk ekledik */
+    }
+
+    .left-content {
+        padding: 0vw 0.6vw;
+        /* Sol içerik stilini güncelle */
+    }
+
+    .left-content img {
+        width: 80vw;
+        height: 80vw;
+        object-fit: cover;
+        border-radius: 3vw;
+    }
+
+    .right-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /*Mobilde alttaki resimlerin 3 tane olarak gösterlimesini sağlar
+        2 yapılırsa 4 resim olarak gösterir*/
+        /* Resimler arasındaki boşluk */
+        /* Sağ içerik stilini güncelle */
+    }
+
+    /* Her resmin stilini güncelle */
+    .gallery-item {
+        text-align: center;
+    }
+
+    .gallery-item:nth-child(4) {
+        display: none;
+        /*alttaki resim 3 tane olduğu için dördüncüyü atar*/
+    }
+
+    .gallery-item img {
+        width: 25.6vw;
+        height: 25.6vw;
+        object-fit: cover;
+        border-color: #FFFFFF;
+        border-radius: 3vw;
+        /* İstediğiniz köşe yuvarlama */
+        padding: 0.2vw 0.8vw;
+    }
+
+    /*      !FOOTER SECTION!      */
+    /* Footerı stilize etmek için CSS kuralları */
+    footer {
+        background-color: var(--background-color);
+        /* Footer arkaplan rengi */
+        color: var(--primary-color);
+        /* Metin rengi */
+        border-top: 1px solid lightgray;
+        display: flex;
+        flex-direction: row;
+        /* İçerikleri yatay olarak hizalar */
+        justify-content: space-between;
+        /* İçerikleri sola ve sağa yay */
+        align-items: center;
+        /* İçerikleri dikey olarak hizala */
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 10vw;
+        font-size: 3vw
+    }
+
+    .footer-left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 3vw;
+    }
+
+    .footer-left img {
+        width: 8vw;
+        /* Logo resmi genişliği */
+        height: auto;
+        /* Otomatik yükseklik ayarla */
+        margin-right: 0.2vw;
+        margin-bottom: 0.2vw;
+        /* Logo ile marka ismi arasındaki boşluk */
+    }
+
+    .footer-marka-ismi {
+        font-weight: var(--font-bold);
+        /* Marka ismini kalın yap */
+    }
+
+    .footer-right p {
+        font-weight: var(--font-bold);
+        margin-right: 2vw;
+        /* Paragrafın içerikten boşluğunu kaldır */
     }
 }
