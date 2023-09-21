@@ -32,9 +32,11 @@ html {
 }
 
 body {
+    padding: 0;
+    margin: 0;
     font-family: "Poppins", sans-serif;
 }
-
+/*      !SERVICE SECTION!      */
 .service-section{
     display: flex;
     flex-direction: column;
@@ -47,6 +49,7 @@ body {
     align-items: baseline;
     color: var(--primary-color);
     height: 80vh;
+    margin-bottom: 3vw;
     /* Sayfanın tamamına yayılmak için */
 }
 
@@ -196,10 +199,63 @@ body {
     text-wrap: wrap;
 }
 
+/*      !FOOTER!      */
+/* Footerı stilize etmek için CSS kuralları */
+footer {
+    background-color: var(--background-color);
+    /* Footer arkaplan rengi */
+    color: var(--primary-color);
+    /* Metin rengi */
+    border-top: 1px solid lightgray;
+    display: flex;
+    flex-direction: row;
+    /* İçerikleri yatay olarak hizalar */
+    justify-content: space-between;
+    /* İçerikleri sola ve sağa yay */
+    align-items: center;
+    /* İçerikleri dikey olarak hizala */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4.2vw;
+    font-size: 1.4vw
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 3vw;
+}
+
+.footer-left img {
+    width: 4vw;
+    /* Logo resmi genişliği */
+    height: auto;
+    /* Otomatik yükseklik ayarla */
+    margin-right: 0.2vw;
+    margin-bottom: 0.2vw;
+    /* Logo ile marka ismi arasındaki boşluk */
+}
+
+.footer-marka-ismi {
+    font-weight: var(--font-bold);
+    /* Marka ismini kalın yap */
+}
+
+.footer-right p {
+    font-weight: var(--font-bold);
+    margin-right: 2vw;
+    /* Paragrafın içerikten boşluğunu kaldır */
+}
+
 /* Mobil düzenlemeler */
 @media screen and (max-width: 675px) {
+    /*      !SERVICE SECTION!      */
     .container{
         flex-direction: column;
+        margin-bottom: 6vw;
+        height: 65vh;
     }
     .row{
         display: none;
@@ -330,5 +386,56 @@ body {
         margin-left: -3vw;
         width: 80vw;
         text-wrap: wrap;
+    }
+
+    /*      !FOOTER!      */
+    /* Footerı stilize etmek için CSS kuralları */
+    footer {
+        background-color: var(--background-color);
+        /* Footer arkaplan rengi */
+        color: var(--primary-color);
+        /* Metin rengi */
+        border-top: 1px solid lightgray;
+        display: flex;
+        flex-direction: row;
+        /* İçerikleri yatay olarak hizalar */
+        justify-content: space-between;
+        /* İçerikleri sola ve sağa yay */
+        align-items: center;
+        /* İçerikleri dikey olarak hizala */
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 10vw;
+        font-size: 3vw
+    }
+
+    .footer-left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 3vw;
+    }
+
+    .footer-left img {
+        width: 8vw;
+        /* Logo resmi genişliği */
+        height: auto;
+        /* Otomatik yükseklik ayarla */
+        margin-right: 0.2vw;
+        margin-bottom: 0.2vw;
+        /* Logo ile marka ismi arasındaki boşluk */
+    }
+
+    .footer-marka-ismi {
+        font-weight: var(--font-bold);
+        /* Marka ismini kalın yap */
+    }
+
+    .footer-right p {
+        font-weight: var(--font-bold);
+        margin-right: 2vw;
+        /* Paragrafın içerikten boşluğunu kaldır */
     }
 }
