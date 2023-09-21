@@ -743,7 +743,7 @@ footer {
     
     .service-info {
         color: var(--primary-color);
-        width: 73vw;
+        width: 75vw;
         font-weight: var(--font-semibold);
         align-items: baseline;
     }
