@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #004870;
+    --primary-color: #00476F;
     /* Ana renk */
     --secondary-color: #00AEEE;
     /* İkincil renk */
@@ -11,6 +11,8 @@
     /*Başlıktaki menü rengi*/
     --text-color: #537480;
     /* Metin rengi */
+    --footer-color: #DBDBDB;
+    /*footer border rengi*/
     --link-color: #007BFF;
     /* Bağlantı rengi */
     --font-light: 300;
@@ -33,7 +35,7 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-.container {
+.service-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,12 +45,12 @@ body {
     /* Sayfanın tamamına yayılmak için */
 }
 
-h2.service{
+h2.our-service-header{
     font-size: 2vw;
     margin-bottom: 2.5vw;
 }
 
-.row {
+.service-row {
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -56,7 +58,7 @@ h2.service{
     margin-bottom: 10px;
 }
 
-.row.medium{
+.service-row.medium{
     display: none;
     justify-content: center;
     gap: 2vw;
@@ -64,7 +66,7 @@ h2.service{
     margin-bottom: 2vw;
     
 }
-.box {
+.service-box {
     display: flex;
     flex-direction: row;
     width: 10vw;
@@ -85,12 +87,12 @@ h2.service{
     /*yavaş bir geçiş için*/
 }
 
-.box:hover img{
+.service-box:hover img{
     filter: brightness(0) invert(1);
     /*ikonları kutu üstüne gelindiğinde beyaz yap*/
 }
 
-.box:hover {
+.service-box:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         /* Yavaş geçişli gölge efekti */
         
@@ -99,55 +101,55 @@ h2.service{
     /*kutunun üstüne geindiğinde renk değişimi*/
 }
 
-.icon {
+.our-service-icon {
     margin-left: -1.2vw;
     width: 3.6vw;
     height: auto;
     transition: filter 0.8s ease;
 }
 
-.icon.smile{
+.our-service-icon.smile{
     margin-left: -1.5vw;
     width: 4.5vw;
     height: auto;
 }
 
-.icon.beyazlatma {
+.our-service-icon.beyazlatma {
     margin-left: -1.2vw;
     width: 3.6vw;
     height: auto;
 }
-.icon.estetik {
+.our-service-icon.estetik {
     margin-left: -1.2vw;
     width: 3.6vw;
     height: auto;
 }
-.icon.kaplama {
+.our-service-icon.kaplama {
     margin-left: -1.2vw;
     width: 4.1vw;
     height: auto;
 }
-.icon.implant {
+.our-service-icon.implant {
     margin-left: -1vw;
     width: 3.6vw;
     height: auto;
 }
-.icon.dis_eti {
+.our-service-icon.dis_eti {
     margin-left: -1.6vw;
     width: 4.5vw;
     height: auto;
 }
-.icon.cene {
+.our-service-icon.cene {
     margin-left: -1.1vw;
     width: 3.7vw;
     height: auto;
 }
-.icon.dis_sikma {
+.our-service-icon.dis_sikma {
     margin-left: -1.5vw;
     width: 4.5vw;
     height: auto;
 }
-.text {
+.our-service-text {
     width: 7.7vw;
     margin-left: 3.8vw;
     font-weight:var(--font-semibold);
@@ -157,17 +159,17 @@ h2.service{
 
 /* Mobil düzenlemeler */
 @media screen and (max-width: 675px) {
-    .box {
+    .service-box {
         width: 15vw;
         height: 4.4vw;
     }
-    .row{
+    .service-row{
         display: none;
     }
-    .row.medium{
+    .service-row.medium{
         display: flex;
     }
-    .box {
+    .service-box {
         display: flex;
         flex-direction: row;
         width: 38vw;
@@ -188,67 +190,67 @@ h2.service{
         /*yavaş bir geçiş için*/
     }
 
-    .icon {
+    .our-service-icon {
         margin-left: 0.6vw;
         width: 8vw;
         height: auto;
         transition: filter 0.8s ease;
     }
 
-    .icon.smile {
+    .our-service-icon.smile {
         margin-left: 0.6vw;
         width: 12.125vw;
         height: auto;
     }
 
-    .icon.beyazlatma {
+    .our-service-icon.beyazlatma {
         margin-left: 1vw;
         width: 9.7vw;
         height: auto;
     }
 
-    .icon.estetik {
+    .our-service-icon.estetik {
         margin-left: 1vw;
         width: 9.7vw;
         height: auto;
     }
 
-    .icon.kaplama {
+    .our-service-icon.kaplama {
         margin-left: 1vw;
         width: 11.048vw;
         height: auto;
     }
 
-    .icon.implant {
+    .our-service-icon.implant {
         margin-left: 1.2vw;
         width: 9.7vw;
         height: auto;
     }
 
-    .icon.dis_eti {
+    .our-service-icon.dis_eti {
         margin-left: 0vw;
         width: 12.125vw;
         height: auto;
     }
 
-    .icon.cene {
+    .our-service-icon.cene {
         margin-left: 1.3vw;
         width: 9.97vw;
         height: auto;
     }
 
-    .icon.dis_sikma {
+    .our-service-icon.dis_sikma {
         margin-left: 0.2vw;
         width: 12.125vw;
         height: auto;
     }
 
-    h2.service {
+    h2.our-service-header {
         font-size: 6vw;
         margin-bottom: 3vw;
     }
 
-    .text {
+    .our-service-text {
         width: 20vw;
         margin-left: 15vw;
         font-weight: var(--font-semibold);

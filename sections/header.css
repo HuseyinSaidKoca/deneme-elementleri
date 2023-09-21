@@ -1,15 +1,18 @@
-/* Temel stil */
 :root {
     --primary-color: #00476F;
     /* Ana renk */
     --secondary-color: #00AEEE;
     /* İkincil renk */
+    --light-background-color: #d4e6f2a4;
+    /*mavi tonlu arkaplan rengi*/
     --background-color: #FFFFFF;
     /* Arka plan rengi */
     --header-text-color: #282828;
     /*Başlıktaki menü rengi*/
     --text-color: #537480;
     /* Metin rengi */
+    --footer-color: #DBDBDB;
+    /*footer border rengi*/
     --link-color: #007BFF;
     /* Bağlantı rengi */
     --font-light: 300;
@@ -36,18 +39,19 @@ header {
     align-items: center;
     background-color: var(--background-color);
     color: var(--header-text-color);
-    margin-top: -10px;
-    padding: 1% 2%; /* % olarak padding kullanımı */
+    margin-top: 0px;
+    padding: 0 2%;
+    /* % olarak padding kullanımı */
 }
 
-.logo img{
+.logo-header img {
     margin-left: 3%;
-    width: 75px;
-    min-width: 70px;
+    margin-top: 1vw;
+    width: 6vw;
     height: auto;
 }
 
-.menu-icon {
+.header-menu-icon {
     display: none;
     margin-top: -4px;
     /* Başlangıçta menü simgesini gizle */
@@ -67,11 +71,11 @@ header {
     /* Başlangıçta toggle menüyü gizle */
     position: absolute;
     top: 0;
-    right: -40%;
+    right: -43vw;
     /* Ekranın %40'u kadar kaydırılmış */
     height: 100vh;
     /* Ekran yüksekliği kadar */
-    width: 40%;
+    width: 43vw;
     /* Ekranın %40'u kadar genişlik */
     background-color: var(--primary-color);
     color: #fff;
@@ -87,27 +91,27 @@ header {
     cursor: pointer;
 }
 
-nav ul.menu {
+nav ul.header-menu {
     list-style: none;
     display: flex;
-    gap: 35px;
-    margin-left: -10%;
+    gap: 3.5vw;
+    margin-left: -7vw;
 }
 
-nav ul.menu li a {
+nav ul.header-menu li a {
     text-decoration: none;
     color: var(--header-text-color);
-    letter-spacing: 0.09rem;
+    letter-spacing: 0.13vw;
     font-weight: var(--font-semibold);
-    font-size: 0.75rem;
+    font-size: 0.85vw;
 }
 
-nav ul.menu li a.activePage {
+nav ul.header-menu li a.activePage {
     text-decoration: none;
     color: var(--secondary-color);
-    letter-spacing: 0.09rem;
+    letter-spacing: 0.13vw;
     font-weight: var(--font-semibold);
-    font-size: 0.75rem;
+    font-size: 0.85vw;
 }
 
 /* Diğer stiller burada yer alır */
@@ -126,8 +130,8 @@ nav ul.menu li a.activePage {
 }
 
 .flags img {
-    width: 30px;
-    height: 30px;
+    width: 2.7vw;
+    height: 2.7vw;
     /* Beyaz bir kenarlık ekleyebilirsiniz */
     border-radius: 50%;
     /* Bayrağı daire şeklinde yapar */
@@ -145,13 +149,14 @@ nav ul.menu li a.activePage {
         padding: 1% 2%;
         /* % olarak padding kullanımı */
     }
-    .logo {
+    .logo-header {
         order: 1;
         /* Logo, menü ikonunun önüne gelir */
     }
 
-    .menu-icon {
+    .header-menu-icon {
         display: flex;
+        margin-right: 1vw;
         /* Mobilde menü simgesini göster */
         order: 3;
         /* Menü simgesi, logonun arkasına gelir */
@@ -163,40 +168,46 @@ nav ul.menu li a.activePage {
     }
     .toggle-menu ul {
         list-style: none;
-        margin-top: 35%;
+        margin-top: 18vw;
         line-height: 2.7;
+        margin-left: -3vw;
     }
 
     .toggle-menu ul li a{
         text-decoration: none;
         color: var(--background-color);
-        letter-spacing: 0.09rem;
+        letter-spacing: 0.3vw;
         font-weight: var(--font-medium);
-        font-size: 0.75rem;
+        font-size: 3.5vw;
     }
 
     .toggle-menu ul li a.activePage {
         text-decoration: none;
         color: var(--secondary-color);
-        letter-spacing: 0.09rem;
+        letter-spacing: 0.3vw;
         font-weight: var(--font-medium);
-        font-size: 0.75rem;
+        font-size: 3.5vw;
     }
 
     .close-icon {
         display: block;
         /* Mobilde kapatma ikonunu göster */
     }
+
     .flags {
         order: 2;
         /* Bayraklar, menü ikonunun arkasına gelir */
-        margin-left: 48%;
+        margin-left: 44vw;
     }
 
-    .logo img {
-        margin-left: 3%;
-        width: 60px;
-        min-width: 50px;
+    .flags img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .logo-header img {
+        margin-left: 1vw;
+        width: 15vw;
         height: auto;
     }
 
@@ -218,7 +229,7 @@ nav ul.menu li a.activePage {
         align-items: center;
     }
 
-    .menu.active li {
+    .header-menu.active li {
         padding: 10px;
         text-align: center;
     }

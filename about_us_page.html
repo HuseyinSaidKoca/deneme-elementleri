@@ -5,10 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="about_us_page.css">
+    <script src="toggle_menu.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 </head>
 
 <body>
+    <header>
+        <div class="logo-header">
+            <img src="images/logo.png" alt="GO Dental Clinic Logosu">
+        </div>
+        <div class="header-menu-icon" id="menuIcon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav class="toggle-menu" id="toggleMenu">
+            <span class="close-icon" id="closeIcon">&times;</span>
+            <ul>
+                <li><a class="activePage" href="#">ANASAYFA</a></li>
+                <li><a href="#">HAKKIMIZDA</a></li>
+                <li><a href="#">HİZMETLERİMİZ</a></li>
+                <li><a href="#">RANDEVU & İLETİŞİM</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul class="header-menu">
+                <li><a class="activePage" href="#">ANASAYFA</a></li>
+                <li><a href="#">HAKKIMIZDA</a></li>
+                <li><a href="#">HİZMETLERİMİZ</a></li>
+                <li><a href="#">RANDEVU & İLETİŞİM</a></li>
+            </ul>
+        </nav>
+        <div class="flags">
+            <a href="#"><img src="images/english_flag.png" alt="İngiltere Bayrağı"></a>
+            <a href="#"><img src="images/german_flag.png" alt="Almanya Bayrağı"></a>
+        </div>
+    </header>
     <div class="row-about">
         <img class="about-img" src="images/about_us.jpg" alt="Görsel">
         <div class="about-text">

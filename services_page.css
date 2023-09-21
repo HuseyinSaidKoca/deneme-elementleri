@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #004870;
+    --primary-color: #00476F;
     /* Ana renk */
     --secondary-color: #00AEEE;
     /* İkincil renk */
@@ -11,6 +11,8 @@
     /*Başlıktaki menü rengi*/
     --text-color: #537480;
     /* Metin rengi */
+    --footer-color: #DBDBDB;
+    /*footer border rengi*/
     --link-color: #007BFF;
     /* Bağlantı rengi */
     --font-light: 300;
