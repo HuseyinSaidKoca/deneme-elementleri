@@ -33,14 +33,128 @@ body {
     margin: 0;
 }
 
+body.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+/*      !HEADER!      */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    color: var(--header-text-color);
+    margin-top: 0px;
+    padding: 0 2%;
+    /* % olarak padding kullanımı */
+}
+
+.logo-header img {
+    margin-left: 3%;
+    margin-top: 1vw;
+    width: 6vw;
+    height: auto;
+}
+
+.header-menu-icon {
+    display: none;
+    margin-top: -4px;
+    /* Başlangıçta menü simgesini gizle */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 3px 2px;
+}
+
+.toggle-menu {
+    display: none;
+    /* Başlangıçta toggle menüyü gizle */
+    position: fixed;
+    top: 0;
+    margin: 0;
+    right: -43vw;
+    /* Ekranın %40'u kadar kaydırılmış */
+    height: 100vh;
+    /* Ekran yüksekliği kadar */
+    width: 43vw;
+    /* Ekranın %40'u kadar genişlik */
+    background-color: var(--primary-color);
+    color: #fff;
+    transition: right 0.3s;
+    /* Animasyon için geçiş süresi ekler */
+}
+
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+nav ul.header-menu {
+    list-style: none;
+    display: flex;
+    gap: 3.5vw;
+    margin-left: -7vw;
+}
+
+nav ul.header-menu li a {
+    text-decoration: none;
+    color: var(--header-text-color);
+    letter-spacing: 0.13vw;
+    font-weight: var(--font-semibold);
+    font-size: 0.85vw;
+}
+
+nav ul.header-menu li a.activePage {
+    text-decoration: none;
+    color: var(--secondary-color);
+    letter-spacing: 0.13vw;
+    font-weight: var(--font-semibold);
+    font-size: 0.85vw;
+}
+
+/* Diğer stiller burada yer alır */
+
+.flags {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    /* Bayrakları sağa hizala */
+}
+
+.flags a {
+    display: inline-block;
+    border-radius: 50%;
+    /* Dairesel şekil için border-radius kullanın */
+}
+
+.flags img {
+    width: 2.7vw;
+    height: 2.7vw;
+    /* Beyaz bir kenarlık ekleyebilirsiniz */
+    border-radius: 50%;
+    /* Bayrağı daire şeklinde yapar */
+}
+
+/*      !CONTACT SECTION!      */
 .contact{
     display: flex;
     flex: 1;
     flex-direction: column;
     width: 70vw;
-    height: 60vw;
-    margin-top: 5vw;
-    margin-bottom: 5vw;
+    height: 58vw;
+    margin-top: 2vw;
+    margin-bottom: 1vw;
     margin-left: 13.5vw;
 }
 
@@ -154,7 +268,7 @@ body {
 .contact-info-container {
     display: flex;
     flex-direction: column;
-    height: 38.5vw;
+    height: 31vw;
     width: 34.5vw;
     background-color: var(--background-color);
     padding: 2.5vw 4.5vw;
@@ -283,7 +397,155 @@ body {
     font-size: 1.3vw;
 }
 
+/*      !FOOTER!      */
+/* Footerı stilize etmek için CSS kuralları */
+footer {
+    background-color: var(--background-color);
+    /* Footer arkaplan rengi */
+    color: var(--primary-color);
+    /* Metin rengi */
+    border-top: 1px solid lightgray;
+    display: flex;
+    flex-direction: row;
+    /* İçerikleri yatay olarak hizalar */
+    justify-content: space-between;
+    /* İçerikleri sola ve sağa yay */
+    align-items: center;
+    /* İçerikleri dikey olarak hizala */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4.2vw;
+    font-size: 1.4vw
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 3vw;
+}
+
+.footer-left img {
+    width: 4vw;
+    /* Logo resmi genişliği */
+    height: auto;
+    /* Otomatik yükseklik ayarla */
+    margin-right: 0.2vw;
+    margin-bottom: 0.2vw;
+    /* Logo ile marka ismi arasındaki boşluk */
+}
+
+.footer-marka-ismi {
+    font-weight: var(--font-bold);
+    /* Marka ismini kalın yap */
+}
+
+.footer-right p {
+    font-weight: var(--font-bold);
+    margin-right: 2vw;
+    /* Paragrafın içerikten boşluğunu kaldır */
+}
+
 @media screen and (max-width: 675px) {
+    /*      !HEADER!      */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--background-color);
+        color: var(--header-text-color);
+        margin-top: 3px;
+        padding: 1% 2%;
+        /* % olarak padding kullanımı */
+    }
+
+    .logo-header {
+        order: 1;
+        /* Logo, menü ikonunun önüne gelir */
+    }
+
+    .header-menu-icon {
+        display: flex;
+        margin-right: 1vw;
+        /* Mobilde menü simgesini göster */
+        order: 3;
+        /* Menü simgesi, logonun arkasına gelir */
+    }
+
+    .toggle-menu {
+        display: block;
+        /* Mobilde toggle menüyü göster */
+        /* Ekranın sağ tarafından sola kaydır */
+    }
+
+    .toggle-menu ul {
+        list-style: none;
+        margin-top: 18vw;
+        line-height: 2.7;
+    }
+
+    .toggle-menu ul li a {
+        text-decoration: none;
+        color: var(--background-color);
+        letter-spacing: 0.3vw;
+        font-weight: var(--font-medium);
+        font-size: 3.5vw;
+    }
+
+    .toggle-menu ul li a.activePage {
+        text-decoration: none;
+        color: var(--secondary-color);
+        letter-spacing: 0.3vw;
+        font-weight: var(--font-medium);
+        font-size: 3.5vw;
+    }
+
+    .close-icon {
+        display: block;
+        /* Mobilde kapatma ikonunu göster */
+    }
+
+    .flags {
+        order: 2;
+        /* Bayraklar, menü ikonunun arkasına gelir */
+        margin-left: 44vw;
+    }
+
+    .flags img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .logo-header img {
+        margin-left: 1vw;
+        width: 15vw;
+        height: auto;
+    }
+
+    nav {
+        display: none;
+        /* Menüyü gizle */
+        background-color: #666666;
+        position: absolute;
+        top: 10px;
+        right: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    nav.active {
+        display: flex;
+        /* Menüyü mobilde göster */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-menu.active li {
+        padding: 10px;
+        text-align: center;
+    }
+    /*      !CONTACT SECTION!      */
     .contact {
         display: flex;
         flex: 1;
@@ -291,7 +553,7 @@ body {
         width: 85vw;
         height: 210vw;
         margin-top: 5vw;
-        margin-bottom: 5vw;
+        margin-bottom: 1vw;
         margin-left: 7.4vw;
     }
 
@@ -408,6 +670,7 @@ body {
         width: 80vw;
         background-color: var(--background-color);
         padding: 6vw 8vw;
+        padding-right: 3vw;
         text-align: left;
     }
     
@@ -431,7 +694,7 @@ body {
     .contact-info {
         /*adres, telefon, e-posta bilgileri*/
         color: var(--primary-color);
-        width: 63vw;
+        width: 66vw;
         text-align: left;
         font-size: 4vw;
         font-weight: var(--font-semibold);
@@ -480,7 +743,7 @@ body {
     
     .service-info {
         color: var(--primary-color);
-        width: 85vw;
+        width: 73vw;
         font-weight: var(--font-semibold);
         align-items: baseline;
     }
@@ -532,5 +795,55 @@ body {
         margin-top: 0.4vw;
         /* Boşluk eklemek için */
         font-size: 3.2vw;
+    }
+
+    /*      !FOOTER!      */
+    /* Footerı stilize etmek için CSS kuralları */
+    footer {
+        background-color: var(--background-color);
+        /* Footer arkaplan rengi */
+        color: var(--primary-color);
+        /* Metin rengi */
+        border-top: 1px solid lightgray;
+        display: flex;
+        flex-direction: row;
+        /* İçerikleri yatay olarak hizalar */
+        justify-content: space-between;
+        /* İçerikleri sola ve sağa yay */
+        align-items: center;
+        /* İçerikleri dikey olarak hizala */
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 10vw;
+        font-size: 3vw
+    }
+
+    .footer-left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 3vw;
+    }
+
+    .footer-left img {
+        width: 8vw;
+        /* Logo resmi genişliği */
+        height: auto;
+        /* Otomatik yükseklik ayarla */
+        margin-right: 0.2vw;
+        margin-bottom: 0.2vw;
+        /* Logo ile marka ismi arasındaki boşluk */
+    }
+
+    .footer-marka-ismi {
+        font-weight: var(--font-bold);
+        /* Marka ismini kalın yap */
+    }
+
+    .footer-right p {
+        font-weight: var(--font-bold);
+        margin-right: 2vw;
+        /* Paragrafın içerikten boşluğunu kaldır */
     }
 }

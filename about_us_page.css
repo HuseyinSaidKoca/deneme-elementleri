@@ -33,6 +33,11 @@ body {
     margin: 0;
 }
 
+.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
 /*      !HEADER!      */
 header {
     display: flex;
@@ -70,8 +75,9 @@ header {
 .toggle-menu {
     display: none;
     /* Başlangıçta toggle menüyü gizle */
-    position: absolute;
+    position: fixed;
     top: 0;
+    margin: 0;
     right: -43vw;
     /* Ekranın %40'u kadar kaydırılmış */
     height: 100vh;

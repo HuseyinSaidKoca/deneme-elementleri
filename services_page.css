@@ -27,15 +27,123 @@
     /* Bold (kalın) yazı tipi ağırlığı */
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     padding: 0;
     margin: 0;
     font-family: "Poppins", sans-serif;
 }
+
+.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
+/*      !HEADER!      */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    color: var(--header-text-color);
+    margin-top: 0px;
+    padding: 0 2%;
+    /* % olarak padding kullanımı */
+}
+
+.logo-header img {
+    margin-left: 3%;
+    margin-top: 1vw;
+    width: 6vw;
+    height: auto;
+}
+
+.header-menu-icon {
+    display: none;
+    margin-top: -4px;
+    /* Başlangıçta menü simgesini gizle */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 3px 2px;
+}
+
+.toggle-menu {
+    display: none;
+    /* Başlangıçta toggle menüyü gizle */
+    position: fixed;
+    top: 0;
+    margin: 0;
+    right: -43vw;
+    /* Ekranın %40'u kadar kaydırılmış */
+    height: 100%;
+    /* Ekran yüksekliği kadar */
+    width: 43vw;
+    /* Ekranın %40'u kadar genişlik */
+    background-color: var(--primary-color);
+    color: #fff;
+    transition: right 0.3s;
+    /* Animasyon için geçiş süresi ekler */
+}
+
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+nav ul.header-menu {
+    list-style: none;
+    display: flex;
+    gap: 3.5vw;
+    margin-left: -7vw;
+}
+
+nav ul.header-menu li a {
+    text-decoration: none;
+    color: var(--header-text-color);
+    letter-spacing: 0.13vw;
+    font-weight: var(--font-semibold);
+    font-size: 0.85vw;
+}
+
+nav ul.header-menu li a.activePage {
+    text-decoration: none;
+    color: var(--secondary-color);
+    letter-spacing: 0.13vw;
+    font-weight: var(--font-semibold);
+    font-size: 0.85vw;
+}
+
+/* Diğer stiller burada yer alır */
+
+.flags {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    /* Bayrakları sağa hizala */
+}
+
+.flags a {
+    display: inline-block;
+    border-radius: 50%;
+    /* Dairesel şekil için border-radius kullanın */
+}
+
+.flags img {
+    width: 2.7vw;
+    height: 2.7vw;
+    /* Beyaz bir kenarlık ekleyebilirsiniz */
+    border-radius: 50%;
+    /* Bayrağı daire şeklinde yapar */
+}
+
 /*      !SERVICE SECTION!      */
 .service-section{
     display: flex;
@@ -251,11 +359,111 @@ footer {
 
 /* Mobil düzenlemeler */
 @media screen and (max-width: 675px) {
+    /*      !HEADER!      */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--background-color);
+        color: var(--header-text-color);
+        margin-top: 3px;
+        padding: 1% 2%;
+        /* % olarak padding kullanımı */
+    }
+
+    .logo-header {
+        order: 1;
+        /* Logo, menü ikonunun önüne gelir */
+    }
+
+    .header-menu-icon {
+        display: flex;
+        margin-right: 1vw;
+        /* Mobilde menü simgesini göster */
+        order: 3;
+        /* Menü simgesi, logonun arkasına gelir */
+    }
+
+    .toggle-menu {
+        display: block;
+        /* Mobilde toggle menüyü göster */
+        /* Ekranın sağ tarafından sola kaydır */
+    }
+
+    .toggle-menu ul {
+        list-style: none;
+        margin-top: 18vw;
+        line-height: 2.7;
+        margin-left: -3vw;
+    }
+
+    .toggle-menu ul li a {
+        text-decoration: none;
+        color: var(--background-color);
+        letter-spacing: 0.3vw;
+        font-weight: var(--font-medium);
+        font-size: 3.5vw;
+    }
+
+    .toggle-menu ul li a.activePage {
+        text-decoration: none;
+        color: var(--secondary-color);
+        letter-spacing: 0.3vw;
+        font-weight: var(--font-medium);
+        font-size: 3.5vw;
+    }
+
+    .close-icon {
+        display: block;
+        /* Mobilde kapatma ikonunu göster */
+    }
+
+    .flags {
+        order: 2;
+        /* Bayraklar, menü ikonunun arkasına gelir */
+        margin-left: 44vw;
+    }
+
+    .flags img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .logo-header img {
+        margin-left: 1vw;
+        width: 15vw;
+        height: auto;
+    }
+
+    nav {
+        display: none;
+        /* Menüyü gizle */
+        background-color: #666666;
+        position: absolute;
+        top: 10px;
+        right: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    nav.active {
+        display: flex;
+        /* Menüyü mobilde göster */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-menu.active li {
+        padding: 10px;
+        text-align: center;
+    }
+
     /*      !SERVICE SECTION!      */
     .container{
         flex-direction: column;
-        margin-bottom: 6vw;
-        height: 65vh;
+        height: 200vw;
+        width: 90vw;
+        padding-left: 2.5vw;
     }
     .row{
         display: none;
@@ -360,7 +568,8 @@ footer {
         align-items: center;
         margin-left: 3vw;
         width: 100%;
-        padding-bottom: 8vw;
+        height: 150vw;
+        
     }
 
     .team-text h2 {
@@ -372,9 +581,7 @@ footer {
         line-height: 2vw;
         color: var(--primary-color);
         font-weight: var(--font-semibold);
-        margin-top: 7vw;
         margin-left: -5.8vw;
-        margin-bottom: 0vw;
     }
 
     .description {
@@ -403,12 +610,12 @@ footer {
         /* İçerikleri sola ve sağa yay */
         align-items: center;
         /* İçerikleri dikey olarak hizala */
-        position: absolute;
+        flex-shrink: 0;
         left: 0;
         bottom: 0;
-        width: 100%;
         height: 10vw;
-        font-size: 3vw
+        font-size: 3vw;
+        margin-top: auto;
     }
 
     .footer-left {
