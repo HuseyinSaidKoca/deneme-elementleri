@@ -6,15 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="main_page.css">
     <script src="toggle_menu.js"></script>
+    <script src="main_page.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
+    <header>
+        <div class="logo-header">
+            <img src="images/logo.png" alt="GO Dental Clinic Logosu">
+        </div>
+        <div class="header-menu-icon" id="menuIcon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav class="toggle-menu" id="toggleMenu">
+            <span class="close-icon" id="closeIcon">&times;</span>
+            <ul>
+                <li><a class="activePage" href="#">ANASAYFA</a></li>
+                <li><a href="about_us_page.html">HAKKIMIZDA</a></li>
+                <li><a href="services_page.html">HİZMETLERİMİZ</a></li>
+                <li><a href="contact_page.html">RANDEVU & İLETİŞİM</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul class="header-menu">
+                <li><a class="activePage" href="#">ANASAYFA</a></li>
+                <li><a href="about_us_page.html">HAKKIMIZDA</a></li>
+                <li><a href="services_page.html">HİZMETLERİMİZ</a></li>
+                <li><a href="contact_page.html">RANDEVU & İLETİŞİM</a></li>
+            </ul>
+        </nav>
+        <div class="flags">
+            <a href="#"><img src="images/english_flag.png" alt="İngiltere Bayrağı"></a>
+            <a href="#"><img src="images/german_flag.png" alt="Almanya Bayrağı"></a>
+        </div>
+    </header>
+    <div class="main-container">
+        <div class="hero-row">
             <div class="element hero">
-                <h1>GO Dental Clinic</h1>
-                <p>Dt. Fahriye Gül Cura</p>
+                <h1 class="hero-line">GO Dental Clinic</h1>
+                <p class="tag-line">Dt. Fahriye Gül Cura</p>
                 <button class="cta-button">Randevu Al</button>
             </div>
             <div class="element right-content">
@@ -23,6 +55,85 @@
                     <div class="rectangle"></div>
                     <img src="images/main.png" alt="Görsel">
                 </div>
+            </div>
+        </div>
+        <div class="service-container">
+            <h2 class="our-service-header">Hizmetlerimiz</h2>
+            <div class="service-row">
+                <a href="services_page.html" class="service-box">
+                    <img class="our-service-icon smile" src="images/services/hollywood_smile.png" alt="İcon 1">
+                    <div class="our-service-text">Gülüş Tasarımı</div>
+                </a>
+                <a href="services_page.html" class="service-box">
+                    <img class="our-service-icon beyazlatma" src="images/services/beyazlatma.png" alt="İcon 2">
+                    <div class="our-service-text">Diş Beyazlatma</div>
+                </a>
+                <a href="services_page.html" class="service-box">
+                    <img class="our-service-icon estetik" src="images/services/estetik.png" alt="İcon 3">
+                    <div class="our-service-text">Estetik Diş Hekimliği</div>
+                </a>
+                <a href="services_page.html" class="service-box">
+                    <img class="our-service-icon kaplama" src="images/services/kaplama.png" alt="İcon 4">
+                    <div class="our-service-text">Diş Kaplama</div>
+                </a>
+            </div>
+            <div class="service-row">
+                <a href="services_page.html" class="service-box">
+                    <img class="our-service-icon implant" src="images/services/implant.png" alt="İcon 5">
+                    <div class="our-service-text">Dental İmplant</div>
+                </a>
+                <a href="services_page.html" class="service-box">
+                    <img class="our-service-icon dis_eti" src="images/services/dis_eti.png" alt="İcon 6">
+                    <div class="our-service-text">Diş Eti Hastalıkları</div>
+                </a>
+                <a href="services_page.html" class="service-box">
+                    <img class="our-service-icon cene" src="images/services/cene.png" alt="İcon 7">
+                    <div class="our-service-text">Çene Cerrahisi</div>
+                </a>
+                <a href="services_page.html" class="service-box">
+                    <img class="our-service-icon dis_sikma" src="images/services/sıkma.png" alt="İcon 8">
+                    <div class="our-service-text">Diş Sıkma Tedavisi</div>
+                </a>
+            </div>
+            <div class="service-row medium">
+                <a href="services_page.html" class="service-box">
+                    <img class="our-service-icon smile" src="images/services/hollywood_smile.png" alt="İcon 1">
+                    <div class="our-service-text">Gülüş Tasarımı</div>
+                </a>
+                <a href="services_page.html" class="service-box">
+                    <img class="our-service-icon beyazlatma" src="images/services/beyazlatma.png" alt="İcon 2">
+                    <div class="our-service-text">Diş Beyazlatma</div>
+                </a>
+            </div>
+            <div class="service-row medium">
+                <a href="services_page.html" class="service-box">
+                    <img class="our-service-icon estetik" src="images/services/estetik.png" alt="İcon 3">
+                    <div class="our-service-text">Estetik Diş Hekimliği</div>
+                </a>
+                <a href="services_page.html" class="service-box">
+                    <img class="our-service-icon kaplama" src="images/services/kaplama.png" alt="İcon 4">
+                    <div class="our-service-text">Diş Kaplama</div>
+                </a>
+            </div>
+            <div class="service-row medium">
+                <a href="services_page.html" class="service-box">
+                    <img class="our-service-icon implant" src="images/services/implant.png" alt="İcon 5">
+                    <div class="our-service-text">Dental İmplant</div>
+                </a>
+                <a href="services_page.html" class="service-box">
+                    <img class="our-service-icon dis_eti" src="images/services/dis_eti.png" alt="İcon 6">
+                    <div class="our-service-text">Diş Eti Hastalıkları</div>
+                </a>
+            </div>
+            <div class="service-row medium">
+                <a href="services_page.html" class="service-box">
+                    <img class="our-service-icon cene" src="images/services/cene.png" alt="İcon 7">
+                    <div class="our-service-text">Çene Cerrahisi</div>
+                </a>
+                <a href="services_page.html" class="service-box">
+                    <img class="our-service-icon dis_sikma" src="images/services/sıkma.png" alt="İcon 8">
+                    <div class="our-service-text">Diş Sıkma Tedavisi</div>
+                </a>
             </div>
         </div>
         <div class="row-team">
@@ -38,7 +149,40 @@
                 <button class="about-us-button">Hakkımızda</button>
             </div>
         </div>
+        <div class="clinic">
+            <div class="gallery-header">
+                <h2>Kliniğimiz</h2>
+            </div>
+            <section class="clinic-content">
+                <div class="clinic-left-content">
+                    <img src="images/clinic_photos/1.jpg" alt="Sol Resim">
+                </div>
+                <div class="clinic-right-content">
+                    <div class="gallery-item">
+                        <img src="images/clinic_photos/2.jpg" alt="Resim 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/clinic_photos/3.jpg" alt="Resim 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/clinic_photos/4.jpg" alt="Resim 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/clinic_photos/5.jpg" alt="Resim 4">
+                    </div>
+                </div>
+            </section>
+        </div>
     </div>
+    <footer>
+        <div class="footer-left">
+            <img src="images/logo.png" alt="Logo">
+            <div class="footer-marka-ismi">Dental Clinic</div>
+        </div>
+        <div class="footer-right">
+            <p>Tüm Hakları Saklıdır &copy; 2023</p>
+        </div>
+    </footer>
 </body>
 
 </html>

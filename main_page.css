@@ -29,21 +29,134 @@
 
 body {
     font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .no-scroll {
     overflow: hidden;
     height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
+
 /* Temel stil */
-.container {
+.main-container {
     display: flex;
     flex-direction: column;
     /* Mobilde dikey sıralama */
 }
 
-.row {
+/*      !HEADER!      */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    color: var(--header-text-color);
+    margin-top: 0px;
+    padding: 0 2%;
+    /* % olarak padding kullanımı */
+}
+
+.logo-header img {
+    margin-left: 3%;
+    margin-top: 1vw;
+    width: 6vw;
+    height: auto;
+}
+
+.header-menu-icon {
+    display: none;
+    margin-top: -4px;
+    /* Başlangıçta menü simgesini gizle */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 3px 2px;
+}
+
+.toggle-menu {
+    display: none;
+    /* Başlangıçta toggle menüyü gizle */
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    margin: 0;
+    right: -43vw;
+    /* Ekranın %40'u kadar kaydırılmış */
+    height: 100vh;
+    /* Ekran yüksekliği kadar */
+    width: 43vw;
+    /* Ekranın %40'u kadar genişlik */
+    background-color: var(--primary-color);
+    color: #fff;
+    transition: right 0.3s;
+    /* Animasyon için geçiş süresi ekler */
+}
+
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+nav ul.header-menu {
+    list-style: none;
+    display: flex;
+    gap: 3.5vw;
+    margin-left: -7vw;
+}
+
+nav ul.header-menu li a {
+    text-decoration: none;
+    color: var(--header-text-color);
+    letter-spacing: 0.13vw;
+    font-weight: var(--font-semibold);
+    font-size: 0.85vw;
+}
+
+nav ul.header-menu li a.activePage {
+    text-decoration: none;
+    color: var(--secondary-color);
+    letter-spacing: 0.13vw;
+    font-weight: var(--font-semibold);
+    font-size: 0.85vw;
+}
+
+/* Diğer stiller burada yer alır */
+
+.flags {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    /* Bayrakları sağa hizala */
+}
+
+.flags a {
+    display: inline-block;
+    border-radius: 50%;
+    /* Dairesel şekil için border-radius kullanın */
+}
+
+.flags img {
+    width: 2.7vw;
+    height: 2.7vw;
+    /* Beyaz bir kenarlık ekleyebilirsiniz */
+    border-radius: 50%;
+    /* Bayrağı daire şeklinde yapar */
+}
+
+/*      !HERO SECTION!      */
+.hero-row {
     display: flex;
     justify-content: space-between;
     /* Elemanları yatayda sağa ve sola hizala */
@@ -51,9 +164,6 @@ body {
 
 .element {
     flex: 1;
-    /* İstediğiniz minimum genişlik */
-    margin: 5px;
-    /* İstediğiniz boşluk miktarı */
     background-color: var(--background-color);
 }
 
@@ -68,13 +178,13 @@ body {
     color: var(--primary-color);
 }
 
-h1 {
+h1.hero-line {
     margin-top: -1%;
     font-size: 5.2vw;
     white-space: nowrap;
 }
 
-p {
+p.tag-line {
     margin-top: -9%;
     font-size: 2.1vw;
     color: var(--secondary-color);
@@ -165,6 +275,137 @@ p {
     /* Resmi üst katmanda görüntülemek için */
 }
 
+/*      !SERVICES SECTION!      */
+.service-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    height: 35vw;
+}
+
+h2.our-service-header {
+    font-size: 2vw;
+    margin-bottom: 2.5vw;
+}
+
+.service-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    /* Kutular arasındaki boşluk */
+    margin-bottom: 10px;
+}
+
+.service-row.medium {
+    display: none;
+    justify-content: center;
+    gap: 2vw;
+    /* Kutular arasındaki boşluk */
+    margin-bottom: 2vw;
+
+}
+
+.service-box {
+    display: flex;
+    flex-direction: row;
+    width: 10vw;
+    height: 4.4vw;
+    align-items: center;
+    /* Satırda 4 kutu olacak şekilde */
+    text-decoration: none;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    /* Arkaplan rengi */
+    border: 0.14vw solid #DFDFDF;
+    border-radius: 0.5vw;
+    /* Gri kenarlık */
+    padding: 0.4vw 2.5vw;
+    text-align: left;
+    transition: box-shadow 0.8s ease, background-color 0.8s ease,
+        color 0.8s ease;
+    /*yavaş bir geçiş için*/
+}
+
+.service-box:hover img {
+    filter: brightness(0) invert(1);
+    /*ikonları kutu üstüne gelindiğinde beyaz yap*/
+}
+
+.service-box:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* Yavaş geçişli gölge efekti */
+
+    color: var(--background-color);
+    background-color: var(--primary-color);
+    /*kutunun üstüne geindiğinde renk değişimi*/
+}
+
+.our-service-icon {
+    margin-left: -1.2vw;
+    width: 3.6vw;
+    height: auto;
+    transition: filter 0.8s ease;
+}
+
+.our-service-icon.smile {
+    margin-left: -1.5vw;
+    width: 4.5vw;
+    height: auto;
+}
+
+.our-service-icon.beyazlatma {
+    margin-left: -1.2vw;
+    width: 3.6vw;
+    height: auto;
+}
+
+.our-service-icon.estetik {
+    margin-left: -1.2vw;
+    width: 3.6vw;
+    height: auto;
+}
+
+.our-service-icon.kaplama {
+    margin-left: -1.2vw;
+    width: 4.1vw;
+    height: auto;
+}
+
+.our-service-icon.implant {
+    margin-left: -1vw;
+    width: 3.6vw;
+    height: auto;
+}
+
+.our-service-icon.dis_eti {
+    margin-left: -1.6vw;
+    width: 4.5vw;
+    height: auto;
+}
+
+.our-service-icon.cene {
+    margin-left: -1.1vw;
+    width: 3.7vw;
+    height: auto;
+}
+
+.our-service-icon.dis_sikma {
+    margin-left: -1.5vw;
+    width: 4.5vw;
+    height: auto;
+}
+
+.our-service-text {
+    width: 7.7vw;
+    margin-left: 3.8vw;
+    font-weight: var(--font-semibold);
+    font-size: 1.2vw;
+    position: absolute;
+}
+
+/*      !TEAM SECTION!      */
 .row-team {
     display: flex;
     align-items: center;
@@ -223,9 +464,226 @@ p {
 .about-us-button:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
+
+/*      !CLINIC SECTION!      */
+.clinic {
+    flex: 1;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--light-background-color);
+    text-align: center;
+    padding-bottom: 2.2vw;
+    margin-top: 3vw;
+
+}
+
+/* Galeri başlığının stilini güncelle */
+.gallery-header {
+    color: var(--primary-color);
+    font-size: 1.5vw;
+    padding: 0.1vw 0vw;
+    line-height: 2vw;
+    /* Başlık ile resimler arasına boşluk ekledik */
+}
+
+
+/* Galeri stilini güncelle, iki sütun ve iki satır olacak şekilde ayarla */
+.clinic-content {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.clinic-left-content {
+    padding: 0vw 0.4vw;
+    /* Sol içerik stilini güncelle */
+}
+
+.clinic-left-content img {
+    width: 33vw;
+    height: 33vw;
+    object-fit: cover;
+    border-radius: 1vw;
+}
+
+.clinic-right-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Resimler arasındaki boşluk */
+    /* Sağ içerik stilini güncelle */
+}
+
+/* Her resmin stilini güncelle */
+.gallery-item {
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 16.1vw;
+    height: 16.1vw;
+    object-fit: cover;
+    border-color: #FFFFFF;
+    border-radius: 1vw;
+    /* İstediğiniz köşe yuvarlama */
+    padding: 0.2vw 0.4vw;
+    /* Resimlerin yüksekliğini 100% olarak ayarla */
+}
+
+/*      !FOOTER!      */
+/* Footerı stilize etmek için CSS kuralları */
+footer {
+    background-color: var(--background-color);
+    /* Footer arkaplan rengi */
+    color: var(--primary-color);
+    /* Metin rengi */
+    border-top: 1px solid lightgray;
+    display: flex;
+    flex-direction: row;
+    /* İçerikleri yatay olarak hizalar */
+    justify-content: space-between;
+    /* İçerikleri sola ve sağa yay */
+    align-items: center;
+    /* İçerikleri dikey olarak hizala */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4.2vw;
+    font-size: 1.4vw
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 3vw;
+}
+
+.footer-left img {
+    width: 4vw;
+    /* Logo resmi genişliği */
+    height: auto;
+    /* Otomatik yükseklik ayarla */
+    margin-right: 0.2vw;
+    margin-bottom: 0.2vw;
+    /* Logo ile marka ismi arasındaki boşluk */
+}
+
+.footer-marka-ismi {
+    font-weight: var(--font-bold);
+    /* Marka ismini kalın yap */
+}
+
+.footer-right p {
+    font-weight: var(--font-bold);
+    margin-right: 2vw;
+    /* Paragrafın içerikten boşluğunu kaldır */
+}
+
 /* Ekran genişliği 768 piksel veya daha küçükse, sıralamayı değiştir */
 @media screen and (max-width: 675px) {
-    .row {
+    /*      !HEADER!      */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--background-color);
+        color: var(--header-text-color);
+        margin-top: 3px;
+        padding: 1% 2%;
+        /* % olarak padding kullanımı */
+    }
+
+    .logo-header {
+        order: 1;
+        /* Logo, menü ikonunun önüne gelir */
+    }
+
+    .header-menu-icon {
+        display: flex;
+        margin-right: 1vw;
+        /* Mobilde menü simgesini göster */
+        order: 3;
+        /* Menü simgesi, logonun arkasına gelir */
+    }
+
+    .toggle-menu {
+        display: block;
+        /* Mobilde toggle menüyü göster */
+        /* Ekranın sağ tarafından sola kaydır */
+    }
+
+    .toggle-menu ul {
+        list-style: none;
+        margin-top: 18vw;
+        line-height: 2.7;
+        margin-left: -3vw;
+    }
+
+    .toggle-menu ul li a {
+        text-decoration: none;
+        color: var(--background-color);
+        letter-spacing: 0.3vw;
+        font-weight: var(--font-medium);
+        font-size: 3.5vw;
+    }
+
+    .toggle-menu ul li a.activePage {
+        text-decoration: none;
+        color: var(--secondary-color);
+        letter-spacing: 0.3vw;
+        font-weight: var(--font-medium);
+        font-size: 3.5vw;
+    }
+
+    .close-icon {
+        display: block;
+        /* Mobilde kapatma ikonunu göster */
+    }
+
+    .flags {
+        order: 2;
+        /* Bayraklar, menü ikonunun arkasına gelir */
+        margin-left: 44vw;
+    }
+
+    .flags img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .logo-header img {
+        margin-left: 1vw;
+        width: 15vw;
+        height: auto;
+    }
+
+    nav {
+        display: none;
+        /* Menüyü gizle */
+        background-color: #666666;
+        position: absolute;
+        top: 10px;
+        right: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    nav.active {
+        display: flex;
+        /* Menüyü mobilde göster */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-menu.active li {
+        padding: 10px;
+        text-align: center;
+    }
+
+    /*      !HERO SECTION!      */
+    .hero-row {
         flex-direction: column-reverse;
         margin-top: 7vw;
         /* Dikey sıralamaya geç */
@@ -247,14 +705,14 @@ p {
         /* Mobilde tam genişlik */
         /* Dikeyde herhangi bir üst boşluk kaldırılıyor */
     }
-    h1 {
+    h1.hero-line {
         margin-top: -1%;
         font-size: 9vw;
         font-weight: var(--font-bold);
         white-space: nowrap;
     }
 
-    p {
+    p.tag-line {
         margin-top: -9%;
         font-size: 4.7vw;
         font-weight: var(--font-bold);
@@ -278,6 +736,8 @@ p {
     /* Üst katman için stil (overlay-box) */
     .overlay-box {
         position: static;
+        margin: 0;
+        padding: 0;
         /* Normal akışa dönüş */
         width: 100%;
         align-items: center;
@@ -312,6 +772,114 @@ p {
         /* Resmi üst katmanda görüntülemek için */
     }
 
+    /*      !SERVICES SECTION!      */
+    .service-container{
+        margin-top: 13vw;
+        height: 75vw;
+    }
+    .service-box {
+        width: 15vw;
+        height: 4.4vw;
+    }
+
+    .service-row {
+        display: none;
+    }
+
+    .service-row.medium {
+        display: flex;
+    }
+
+    .service-box {
+        display: flex;
+        flex-direction: row;
+        width: 38vw;
+        height: 13vw;
+        align-items: center;
+        /* Satırda 4 kutu olacak şekilde */
+        text-decoration: none;
+        color: var(--primary-color);
+        background-color: var(--background-color);
+        /* Arkaplan rengi */
+        border: 0.5vw solid #DFDFDF;
+        border-radius: 3vw;
+        /* Gri kenarlık */
+        padding: 0.4vw 2.5vw;
+        text-align: left;
+        transition: box-shadow 0.8s ease, background-color 0.8s ease,
+            color 0.8s ease;
+        /*yavaş bir geçiş için*/
+    }
+
+    .our-service-icon {
+        margin-left: 0.6vw;
+        width: 8vw;
+        height: auto;
+        transition: filter 0.8s ease;
+    }
+
+    .our-service-icon.smile {
+        margin-left: 0.6vw;
+        width: 12.125vw;
+        height: auto;
+    }
+
+    .our-service-icon.beyazlatma {
+        margin-left: 1vw;
+        width: 9.7vw;
+        height: auto;
+    }
+
+    .our-service-icon.estetik {
+        margin-left: 1vw;
+        width: 9.7vw;
+        height: auto;
+    }
+
+    .our-service-icon.kaplama {
+        margin-left: 1vw;
+        width: 11.048vw;
+        height: auto;
+    }
+
+    .our-service-icon.implant {
+        margin-left: 1.2vw;
+        width: 9.7vw;
+        height: auto;
+    }
+
+    .our-service-icon.dis_eti {
+        margin-left: 0vw;
+        width: 12.125vw;
+        height: auto;
+    }
+
+    .our-service-icon.cene {
+        margin-left: 1.3vw;
+        width: 9.97vw;
+        height: auto;
+    }
+
+    .our-service-icon.dis_sikma {
+        margin-left: 0.2vw;
+        width: 12.125vw;
+        height: auto;
+    }
+
+    h2.our-service-header {
+        font-size: 6vw;
+        margin-bottom: 3vw;
+    }
+
+    .our-service-text {
+        width: 20vw;
+        margin-left: 15vw;
+        font-weight: var(--font-semibold);
+        font-size: 3.3vw;
+        position: absolute;
+    }
+
+    /*      !TEAM SECTION!      */
     .row-team {
         display: flex;
         align-items: center;
@@ -340,7 +908,7 @@ p {
         font-size: 5.4vw;
         line-height: 6.5vw;
         color: var(--primary-color);
-        margin-bottom: 8.5vw;
+        margin-bottom: 0.5vw;
     }
 
     .team-text p {
@@ -365,5 +933,124 @@ p {
         cursor: pointer;
         margin-top: 0.5vw;
         transition: box-shadow 0.5s ease;
+    }
+
+    /*      !CLINIC SECTION!      */
+    .clinic-content {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .clinic {
+        flex: 1;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--light-background-color);
+        text-align: center;
+        padding-bottom: 7vw;
+        margin-top: 2vw;
+    }
+
+    /* Galeri başlığının stilini güncelle */
+    .gallery-header {
+        color: var(--primary-color);
+        font-size: 4.5vw;
+        padding: 0.1vw 0vw;
+        line-height: 5vw;
+        /* Başlık ile resimler arasına boşluk ekledik */
+    }
+
+    .clinic-left-content {
+        padding: 0vw 0.6vw;
+        /* Sol içerik stilini güncelle */
+    }
+
+    .clinic-left-content img {
+        width: 80vw;
+        height: 80vw;
+        object-fit: cover;
+        border-radius: 3vw;
+    }
+
+    .clinic-right-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /*Mobilde alttaki resimlerin 3 tane olarak gösterlimesini sağlar
+        2 yapılırsa 4 resim olarak gösterir*/
+        /* Resimler arasındaki boşluk */
+        /* Sağ içerik stilini güncelle */
+    }
+
+    /* Her resmin stilini güncelle */
+    .gallery-item {
+        text-align: center;
+    }
+
+    .gallery-item:nth-child(4) {
+        display: none;
+        /*alttaki resim 3 tane olduğu için dördüncüyü atar*/
+    }
+
+    .gallery-item img {
+        width: 25.6vw;
+        height: 25.6vw;
+        object-fit: cover;
+        border-color: #FFFFFF;
+        border-radius: 3vw;
+        /* İstediğiniz köşe yuvarlama */
+        padding: 0.2vw 0.8vw;
+    }
+    
+    /*      !FOOTER!      */
+    /* Footerı stilize etmek için CSS kuralları */
+    footer {
+        background-color: var(--background-color);
+        /* Footer arkaplan rengi */
+        color: var(--primary-color);
+        /* Metin rengi */
+        border-top: 1px solid lightgray;
+        display: flex;
+        flex-direction: row;
+        /* İçerikleri yatay olarak hizalar */
+        justify-content: space-between;
+        /* İçerikleri sola ve sağa yay */
+        align-items: center;
+        /* İçerikleri dikey olarak hizala */
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 10vw;
+        font-size: 3vw
+    }
+
+    .footer-left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 3vw;
+    }
+
+    .footer-left img {
+        width: 8vw;
+        /* Logo resmi genişliği */
+        height: auto;
+        /* Otomatik yükseklik ayarla */
+        margin-right: 0.2vw;
+        margin-bottom: 0.2vw;
+        /* Logo ile marka ismi arasındaki boşluk */
+    }
+
+    .footer-marka-ismi {
+        font-weight: var(--font-bold);
+        /* Marka ismini kalın yap */
+    }
+
+    .footer-right p {
+        font-weight: var(--font-bold);
+        margin-right: 2vw;
+        /* Paragrafın içerikten boşluğunu kaldır */
     }
 }

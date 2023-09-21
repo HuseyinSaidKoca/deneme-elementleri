@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", (event) => {//sayfa yüklenmesini be
     box1.addEventListener("click", function (e) {
     
     e.preventDefault(); // Sayfa yenilemeyi engellemek için
-    document.querySelectorAll(".team-text").forEach(function (div) {
+    document.querySelectorAll(".service-text").forEach(function (div) {
         div.style.display = "none";
     });
 
@@ -34,7 +34,7 @@ window.addEventListener("DOMContentLoaded", (event) => {//sayfa yüklenmesini be
     box2.addEventListener("click", function (e) {
     
     e.preventDefault(); // Sayfa yenilemeyi engellemek için
-    document.querySelectorAll(".team-text").forEach(function (div) {
+    document.querySelectorAll(".service-text").forEach(function (div) {
         div.style.display = "none";
     });
 
@@ -46,7 +46,7 @@ window.addEventListener("DOMContentLoaded", (event) => {//sayfa yüklenmesini be
     box3.addEventListener("click", function (e) {
     
     e.preventDefault(); // Sayfa yenilemeyi engellemek için
-    document.querySelectorAll(".team-text").forEach(function (div) {
+    document.querySelectorAll(".service-text").forEach(function (div) {
         div.style.display = "none";
     });
 
@@ -58,7 +58,7 @@ window.addEventListener("DOMContentLoaded", (event) => {//sayfa yüklenmesini be
     box4.addEventListener("click", function (e) {
     
     e.preventDefault(); // Sayfa yenilemeyi engellemek için
-    document.querySelectorAll(".team-text").forEach(function (div) {
+    document.querySelectorAll(".service-text").forEach(function (div) {
         div.style.display = "none";
     });
 
@@ -70,7 +70,7 @@ window.addEventListener("DOMContentLoaded", (event) => {//sayfa yüklenmesini be
     box5.addEventListener("click", function (e) {
     
     e.preventDefault(); // Sayfa yenilemeyi engellemek için
-    document.querySelectorAll(".team-text").forEach(function (div) {
+    document.querySelectorAll(".service-text").forEach(function (div) {
         div.style.display = "none";
     });
 
@@ -82,7 +82,7 @@ window.addEventListener("DOMContentLoaded", (event) => {//sayfa yüklenmesini be
     box6.addEventListener("click", function (e) {
     
     e.preventDefault(); // Sayfa yenilemeyi engellemek için
-    document.querySelectorAll(".team-text").forEach(function (div) {
+    document.querySelectorAll(".service-text").forEach(function (div) {
         div.style.display = "none";
     });
 
@@ -94,7 +94,7 @@ window.addEventListener("DOMContentLoaded", (event) => {//sayfa yüklenmesini be
     box7.addEventListener("click", function (e) {
     
     e.preventDefault(); // Sayfa yenilemeyi engellemek için
-    document.querySelectorAll(".team-text").forEach(function (div) {
+    document.querySelectorAll(".service-text").forEach(function (div) {
         div.style.display = "none";
     });
 
@@ -106,7 +106,7 @@ window.addEventListener("DOMContentLoaded", (event) => {//sayfa yüklenmesini be
     box8.addEventListener("click", function (e) {
     
     e.preventDefault(); // Sayfa yenilemeyi engellemek için
-    document.querySelectorAll(".team-text").forEach(function (div) {
+    document.querySelectorAll(".service-text").forEach(function (div) {
         div.style.display = "none";
     });
 
@@ -119,7 +119,7 @@ window.addEventListener("DOMContentLoaded", (event) => {//sayfa yüklenmesini be
     mobilebox1.addEventListener("click", function (e) {
     
     e.preventDefault(); // Sayfa yenilemeyi engellemek için
-    document.querySelectorAll(".team-text").forEach(function (div) {
+    document.querySelectorAll(".service-text").forEach(function (div) {
         div.style.display = "none";
     });
 
@@ -131,7 +131,7 @@ window.addEventListener("DOMContentLoaded", (event) => {//sayfa yüklenmesini be
     mobilebox2.addEventListener("click", function (e) {
     
     e.preventDefault(); // Sayfa yenilemeyi engellemek için
-    document.querySelectorAll(".team-text").forEach(function (div) {
+    document.querySelectorAll(".service-text").forEach(function (div) {
         div.style.display = "none";
     });
 
@@ -143,7 +143,7 @@ window.addEventListener("DOMContentLoaded", (event) => {//sayfa yüklenmesini be
     mobilebox3.addEventListener("click", function (e) {
     
     e.preventDefault(); // Sayfa yenilemeyi engellemek için
-    document.querySelectorAll(".team-text").forEach(function (div) {
+    document.querySelectorAll(".service-text").forEach(function (div) {
         div.style.display = "none";
     });
 
@@ -155,7 +155,7 @@ window.addEventListener("DOMContentLoaded", (event) => {//sayfa yüklenmesini be
     mobilebox4.addEventListener("click", function (e) {
     
     e.preventDefault(); // Sayfa yenilemeyi engellemek için
-    document.querySelectorAll(".team-text").forEach(function (div) {
+    document.querySelectorAll(".service-text").forEach(function (div) {
         div.style.display = "none";
     });
 
@@ -167,7 +167,7 @@ window.addEventListener("DOMContentLoaded", (event) => {//sayfa yüklenmesini be
     mobilebox5.addEventListener("click", function (e) {
     
     e.preventDefault(); // Sayfa yenilemeyi engellemek için
-    document.querySelectorAll(".team-text").forEach(function (div) {
+    document.querySelectorAll(".service-text").forEach(function (div) {
         div.style.display = "none";
     });
 
@@ -179,7 +179,7 @@ window.addEventListener("DOMContentLoaded", (event) => {//sayfa yüklenmesini be
     mobilebox6.addEventListener("click", function (e) {
     
     e.preventDefault(); // Sayfa yenilemeyi engellemek için
-    document.querySelectorAll(".team-text").forEach(function (div) {
+    document.querySelectorAll(".service-text").forEach(function (div) {
         div.style.display = "none";
     });
 
@@ -191,7 +191,7 @@ window.addEventListener("DOMContentLoaded", (event) => {//sayfa yüklenmesini be
     mobilebox7.addEventListener("click", function (e) {
     
     e.preventDefault(); // Sayfa yenilemeyi engellemek için
-    document.querySelectorAll(".team-text").forEach(function (div) {
+    document.querySelectorAll(".service-text").forEach(function (div) {
         div.style.display = "none";
     });
 
@@ -203,7 +203,7 @@ window.addEventListener("DOMContentLoaded", (event) => {//sayfa yüklenmesini be
     mobilebox8.addEventListener("click", function (e) {
     
     e.preventDefault(); // Sayfa yenilemeyi engellemek için
-    document.querySelectorAll(".team-text").forEach(function (div) {
+    document.querySelectorAll(".service-text").forEach(function (div) {
         div.style.display = "none";
     });
 
