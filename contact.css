@@ -72,79 +72,6 @@ body {
     
 }
 
-.contact-info-container{
-    display: flex;
-    flex-direction: column;
-    height: 38.5vw;
-    width: 34.5vw;
-    background-color: var(--background-color);
-    padding: 2.5vw 4.5vw;
-    text-align: left;
-}
-
-.contact-header {
-    color: var(--primary-color);
-    display: flex;
-    align-items: center;
-    text-align: left;
-    font-size: 2vw;
-    font-weight: var(--font-semibold);
-    margin-bottom: 0.2vw
-}
-
-.divider {
-    width: 5vw;
-    height: 0.15vw;
-    background-color: var(--primary-color);
-    margin: 0 0.8vw;
-}
-
-.contact-info {
-    color: var(--primary-color);
-    width: 23vw;
-    text-align: left;
-    font-size: 1.3vw;
-    font-weight: var(--font-semibold);
-}
-
-.info-item {
-    display: flex;
-    margin-bottom: 0.7vw;
-    align-items: center;
-    letter-spacing: 0.05vw;
-}
-
-.info-item:nth-child(1) {
-    display: flex;
-    margin-bottom: 0.7vw;
-    align-items: flex-start;
-}
-
-.info-icon {
-    margin-right: 0.7vw;
-    margin-left: 0.3vw;
-}
-
-.info-item:nth-child(1) .info-icon i {
-    font-size: 2.2vw;
-    /* Adres ikon boyutu */
-}
-
-.info-item:nth-child(2) .info-icon i {
-    font-size: 2.1vw;
-    /* Whatsapp ikon boyutu */
-}
-
-.info-item:nth-child(3) .info-icon i {
-    font-size: 1.8vw;
-    /* Mail ikon boyutu */
-}
-
-.info-text p {
-    margin: 0;
-    color: var(--primary-color);
-}
-
 .form-header {
     display: flex;
     font-size: 3.5vw;
@@ -223,6 +150,387 @@ body {
 .form-group button:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
+
+.contact-info-container {
+    display: flex;
+    flex-direction: column;
+    height: 38.5vw;
+    width: 34.5vw;
+    background-color: var(--background-color);
+    padding: 2.5vw 4.5vw;
+    text-align: left;
+}
+
+.contact-header {
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    text-align: left;
+    font-size: 2vw;
+    font-weight: var(--font-semibold);
+    margin-bottom: 0.2vw
+}
+
+.divider {
+    width: 5vw;
+    height: 0.15vw;
+    background-color: var(--primary-color);
+    margin: 0 0.8vw;
+}
+
+.contact-info {
+    color: var(--primary-color);
+    width: 23vw;
+    text-align: left;
+    font-size: 1.3vw;
+    font-weight: var(--font-semibold);
+    margin-bottom: 1.8vw;
+}
+
+.info-item {
+    display: flex;
+    margin-bottom: 0.7vw;
+    align-items: center;
+    letter-spacing: 0.05vw;
+}
+
+.info-item:nth-child(1) {
+    display: flex;
+    margin-bottom: 0.7vw;
+    align-items: flex-start;
+}
+
+.info-icon {
+    margin-right: 0.7vw;
+    margin-left: 0.3vw;
+}
+
+.info-item:nth-child(1) .info-icon i {
+    margin-right: -0.3vw;
+    margin-left: -0.6vw;
+    font-size: 2.8vw;
+    /* Adres ikon boyutu */
+}
+
+.info-item:nth-child(2) .info-icon i {
+    font-size: 2.1vw;
+    /* Whatsapp ikon boyutu */
+}
+
+.info-item:nth-child(3) .info-icon i {
+    font-size: 1.8vw;
+    /* Mail ikon boyutu */
+}
+
+.info-text p {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.service-info {
+    color: var(--primary-color);
+    width: 45vw;
+    font-weight: var(--font-semibold);
+    align-items: baseline;
+}
+
+/* Her hizmet öğesi */
+.service-item {
+    display: inline-block;
+    width: 10vw;
+    /* İstedğiniz genişlik */
+    text-align: center;
+    margin-top: 1vw;
+    /* Aralık eklemek için */
+    align-items: baseline;
+}
+
+/* İkonlar */
+.service-icon {
+    white-space: nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    /* İkon arkaplan rengi */
+    color: var(--background-color);
+    /* İkon rengi */
+    width: 5vw;
+    /* İkon konteynerinin genişliği */
+    height: 5vw;
+    /* İkon konteynerinin yüksekliği */
+    border-radius: 50%;
+    /* İkon konteynerini daire şeklinde yapar */
+    line-height: 5vw;
+    /* İkonu dikeyde ortalar */
+    margin: 0 auto;
+    /* İkonu yatayda ortalar */
+    font-size: 2.3vw;
+}
+
+.material-symbols-outlined {
+    font-weight: lighter;
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 100,
+        'GRAD' 0,
+        'opsz' 0
+}
+
+/* Hizmet ismi */
+.service-name {
+    margin-top: 0.4vw;
+    /* Boşluk eklemek için */
+    font-size: 1.3vw;
+}
+
 @media screen and (max-width: 675px) {
+    .contact {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        width: 85vw;
+        height: 210vw;
+        margin-top: 5vw;
+        margin-bottom: 5vw;
+        margin-left: 7.4vw;
+    }
+
+    .contact-image {
+        /*resim*/
+        object-fit: cover;
+        height: 45vw;
+        border-radius: 5vw 5vw 0px 0px;
+    }
+
+    .info {
+        /*resmin altındaki tüm bölüm*/
+        width: 85vw;
+        height: 120vw;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .form {
+        /*form kısmı*/
+        height: 70vw;
+        width: 67vw;
+        background-color: var(--light-background-color);
+        color: var(--primary-color);
+        border-radius: 0px 0px 5vw 5vw;
+        padding: 2vw 9vw;
+        align-items: baseline;
+        text-align: left;
+
+    }
+
+    .form-header {
+        display: flex;
+        font-size: 8.2vw;
+        font-weight: var(--font-semibold);
+        color: var(--primary-color);
+        margin-top: 0vw;
+        margin-bottom: 1.8vw;
+    }
+
+    .form-group {
+        text-align: left;
+        position: relative;
+        margin-bottom: 4.5vw;
+        /* Label'ları üst katman olarak konumlandırmak için */
+    }
+
+    .form-group label {
+        display: block;
+        font-weight: bold;
+        font-size: 2.4vw;
+        color: var(--primary-color);
+        position: absolute;
+        /* Label'ları üst katman olarak konumlandırmak için */
+        top: -2.8vw;
+        /* Label'ları text box'ın üstünde göstermek için yukarı kaydırın */
+        left: 1.5vw;
+        /* Label'ları sola hizalamak için */
+        background-color: transparent;
+        /* Arka planı temizlemek için */
+        padding: 0.6vw 5px;
+        /* Label'ları daha okunaklı hale getirmek için boşluk ekleyin */
+        transition: top 0.3s ease;
+        /* Geçiş efekti ekleyin */
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"] {
+        width: 55vw;
+        height: 3.5vw;
+        background-color: transparent;
+        padding: 10px;
+        font-weight: var(--font-semibold);
+        border: 0.6vw solid var(--background-color);
+        border-radius: 2.1vw;
+    }
+
+    /* Label'ların aktif durumunda yukarı kaydırmasını sağlayın */
+    .form-group input:focus+label,
+    .form-group input:valid+label {
+        font-family: "Poppins", sans-serif;
+        font-weight: var(--font-semibold);
+        color: var(--primary-color);
+        border-color: var(--background-color);
+        top: -20px;
+        font-size: 1vw;
+        /* İsteğe bağlı olarak daha küçük bir yazı tipi ekleyebilirsiniz */
+    }
+
+    .form-group button {
+        background: linear-gradient(to right, var(--secondary-color), #0075B6);
+        color: #fff;
+        padding: 1.8vw 9vw;
+        border: none;
+        border-radius: 2.3vw;
+        font-family: Poppins;
+        letter-spacing: 0.3vw;
+        margin-left: 15.5vw;
+        font-size: 3.3vw;
+        font-weight: var(--font-semibold);
+        cursor: pointer;
+        margin-top: 3vw;
+        margin-bottom: 1vw;
+        transition: box-shadow 0.5s ease;
+    }
+
+    .contact-info-container {
+        /*iletişim ve hizmet bilgileri kutusu*/
+        display: flex;
+        flex-direction: column;
+        height: 38.5vw;
+        width: 80vw;
+        background-color: var(--background-color);
+        padding: 6vw 8vw;
+        text-align: left;
+    }
     
+    .contact-header {
+        color: var(--primary-color);
+        display: flex;
+        align-items: center;
+        text-align: left;
+        font-size: 6vw;
+        font-weight: var(--font-semibold);
+        margin-bottom: 0.2vw
+    }
+    
+    .divider {
+        width: 13vw;
+        height: 0.4vw;
+        background-color: var(--primary-color);
+        margin: 0 2vw;
+    }
+    
+    .contact-info {
+        /*adres, telefon, e-posta bilgileri*/
+        color: var(--primary-color);
+        width: 63vw;
+        text-align: left;
+        font-size: 4vw;
+        font-weight: var(--font-semibold);
+        margin-bottom: 5vw;
+    }
+    
+    .info-item {
+        display: flex;
+        margin-bottom: 1vw;
+        align-items: center;
+        letter-spacing: 0.1vw;
+    }
+    
+    .info-item:nth-child(1) {
+        display: flex;
+        margin-bottom: 2.5vw;
+        align-items: flex-start;
+    }
+    
+    .info-icon {
+        margin-right: 0.7vw;
+        margin-left: 0.3vw;
+    }
+    
+    .info-item:nth-child(1) .info-icon i {
+        margin-right: -0.8vw;
+        margin-left: -1.5vw;
+        font-size: 7vw;
+        /* Adres ikon boyutu */
+    }
+    
+    .info-item:nth-child(2) .info-icon i {
+        font-size: 5vw;
+        /* Whatsapp ikon boyutu */
+    }
+    
+    .info-item:nth-child(3) .info-icon i {
+        font-size: 4.6vw;
+        /* Mail ikon boyutu */
+    }
+    
+    .info-text p {
+        margin: 0;
+        color: var(--primary-color);
+    }
+    
+    .service-info {
+        color: var(--primary-color);
+        width: 85vw;
+        font-weight: var(--font-semibold);
+        align-items: baseline;
+    }
+    
+    /* Her hizmet öğesi */
+    .service-item {
+        display: inline-block;
+        width: 23vw;
+        /* İstedğiniz genişlik */
+        text-align: center;
+        margin-top: 2vw;
+        /* Aralık eklemek için */
+        align-items: baseline;
+    }
+    
+    /* İkonlar */
+    .service-icon {
+        white-space: nowrap;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--primary-color);
+        /* İkon arkaplan rengi */
+        color: var(--background-color);
+        /* İkon rengi */
+        width: 15vw;
+        /* İkon konteynerinin genişliği */
+        height: 15vw;
+        /* İkon konteynerinin yüksekliği */
+        border-radius: 50%;
+        /* İkon konteynerini daire şeklinde yapar */
+        line-height: 15vw;
+        /* İkonu dikeyde ortalar */
+        margin: 0 auto;
+        /* İkonu yatayda ortalar */
+        font-size: 7vw;
+    }
+    
+    .material-symbols-outlined {
+        font-weight: lighter;
+        font-variation-settings:
+            'FILL' 0,
+            'wght' 100,
+            'GRAD' 0,
+            'opsz' 0
+    }
+    
+    /* Hizmet ismi */
+    .service-name {
+        margin-top: 0.4vw;
+        /* Boşluk eklemek için */
+        font-size: 3.2vw;
+    }
 }

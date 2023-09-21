@@ -1,0 +1,137 @@
+:root {
+    --primary-color: #00476F;
+    /* Ana renk */
+    --secondary-color: #00AEEE;
+    /* İkincil renk */
+    --light-background-color: #d4e6f2a4;
+    /*mavi tonlu arkaplan rengi*/
+    --background-color: #FFFFFF;
+    /* Arka plan rengi */
+    --header-text-color: #282828;
+    /*Başlıktaki menü rengi*/
+    --text-color: #537480;
+    /* Metin rengi */
+    --footer-color:#DBDBDB
+    /*footer border rengi*/
+    --link-color: #007BFF;
+    /* Bağlantı rengi */
+    --font-light: 300;
+    /* Light (hafif) yazı tipi ağırlığı */
+    --font-regular: 400;
+    /* Regular (normal) yazı tipi ağırlığı */
+    --font-medium: 500;
+    /* Medium (orta) yazı tipi ağırlığı */
+    --font-semibold: 600;
+    /* Semibold (yarım kalın) yazı tipi ağırlığı */
+    --font-bold: 700;
+    /* Bold (kalın) yazı tipi ağırlığı */
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.row-team {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+}
+
+.team-img {
+    width: 33.8vw;
+    height: 39vw;
+    object-fit: cover;
+    object-position: 25% 0;
+    border-radius: 1.3vw;
+    margin-left: 6.5vw;
+    margin-right: 3vw;
+}
+
+.team-text {
+    align-items: baseline;
+    text-align: left;
+    width: 45vw;
+}
+
+.team-text h2 {
+    font-size: 4.9vw;
+    color: var(--primary-color);
+    font-weight: var(--font-semibold);
+    margin: 0;
+    margin-top: -0.5vw;
+}
+
+.team-text h1 {
+    font-size: 2vw;
+    color: var(--secondary-color);
+    font-weight: var(--font-semibold);
+    margin: 0;
+    margin-top: -1vw;
+    margin-bottom: 1vw;
+}
+
+.team-text p {
+    font-size: 1.3vw;
+    font-weight: var(--font-medium);
+    color: var(--text-color);
+    line-height: 1.7vw;
+    width: 36vw;
+    text-wrap: wrap;
+}
+
+@media screen and (max-width: 675px) {
+    .row-team {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: left;
+        margin-top: 7vw;
+        margin-bottom: 7vw;
+    }
+
+    .team-img {
+        width: 80vw;
+        height: 55vw;
+        object-fit: cover;
+        border-radius: 2.5vw;
+        margin-left: 7.6vw;
+        margin-right: 8vw;
+    }
+
+    .team-text {
+        align-items: center;
+        text-align: center;
+        width: 80vw;
+    }
+
+    .team-text h2 {
+        font-size: 9vw;
+        line-height: 6.5vw;
+        color: var(--primary-color);
+        margin-bottom: 2vw;
+    }
+
+    .team-text h1 {
+        font-size: 4vw;
+        color: var(--secondary-color);
+        font-weight: var(--font-semibold);
+        margin: 0;
+        margin-top: -1vw;
+        margin-bottom: 1.5vw;
+    }
+
+    .team-text p {
+        font-size: 3.6vw;
+        line-height: 6vw;
+        color: var(--text-color);
+        width: 80vw;
+        text-align: justify;
+        text-wrap: wrap;
+        margin-bottom: 5vw;
+    }
+}
