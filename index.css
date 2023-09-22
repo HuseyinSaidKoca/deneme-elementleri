@@ -963,6 +963,7 @@ footer {
 
     h2.our-service-header {
         font-size: 6vw;
+        font-weight: var(--font-semibold);
         margin-bottom: 3vw;
     }
 
@@ -1053,6 +1054,7 @@ footer {
     .gallery-header {
         color: var(--primary-color);
         font-size: 4.5vw;
+        font-weight: var(--font-semibold);
         padding: 0.1vw 0vw;
         line-height: 5vw;
         /* Başlık ile resimler arasına boşluk ekledik */
