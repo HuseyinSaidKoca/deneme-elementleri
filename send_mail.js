@@ -12,6 +12,6 @@ document.getElementById('sendMailButton').addEventListener('click', function() {
         "Varsa Mesajınız:"
     );
 
-    window.location.href = "mailto:huseyinsaidk@gmail.com?subject=" + subject + "&body=" + body;
+    window.location.href = "mailto:info@godental.clinic?subject=" + subject + "&body=" + body;
 });
 })
