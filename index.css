@@ -581,7 +581,9 @@ h2.our-service-header {
     line-height: 2vw;
     /* Başlık ile resimler arasına boşluk ekledik */
 }
-
+.gallery-header h2 {
+    font-weight: var(--font-semibold);
+}
 
 /* Galeri stilini güncelle, iki sütun ve iki satır olacak şekilde ayarla */
 .clinic-content {
@@ -1059,6 +1061,10 @@ footer {
         padding: 0.1vw 0vw;
         line-height: 5vw;
         /* Başlık ile resimler arasına boşluk ekledik */
+    }
+
+    .gallery-header h2{
+        font-weight: var(--font-semibold);
     }
 
     .clinic-left-content {
