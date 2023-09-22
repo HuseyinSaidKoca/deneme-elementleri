@@ -537,6 +537,7 @@ h2.our-service-header {
     font-size: 1vw;
     font-weight: var(--font-medium);
     color: var(--text-color);
+    text-align: justify;
     line-height: 1.9vw;
     width: 31vw;
     text-wrap: wrap;
