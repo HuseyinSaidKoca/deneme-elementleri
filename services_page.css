@@ -360,7 +360,7 @@ nav ul.header-menu li a.activePage {
 }
 .text {
     /*box texts*/
-    width: 5.1vw;
+    width: 6vw;
     margin-left: 2.8vw;
     font-weight:var(--font-semibold);
     font-size: 1vw;
