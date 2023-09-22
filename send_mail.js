@@ -16,9 +16,9 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     .then(response => response.json())
     .then(data => {
         if(data.success) {
-            submitButton.textContent = "Başarıyla Gönderildi!";
+            submitButton.textContent = "Gönderildi!";
         } else {
-            submitButton.textContent = "Hata! Tekrar Deneyin.";
+            submitButton.textContent = "Tekrar Deneyin!";
         }
         // 3 saniye bekledikten sonra butonun yazısını geri değiştir
         setTimeout(() => {
@@ -27,7 +27,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     })
     .catch(error => {
         console.error('Error:', error);
-        submitButton.textContent = "Hata! Tekrar Deneyin.";
+        submitButton.textContent = "Tekrar Deneyin!";
         // 3 saniye bekledikten sonra butonun yazısını geri değiştir
         setTimeout(() => {
             submitButton.textContent = "GÖNDER";
