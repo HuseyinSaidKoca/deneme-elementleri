@@ -1,3 +1,4 @@
+window.addEventListener("DOMContentLoaded", (event) => {//sayfa yüklenmesini bekle
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault(); // Formun varsayılan gönderimini engelle
 
@@ -33,3 +34,4 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
         }, 3000);
     });
 });
+})
