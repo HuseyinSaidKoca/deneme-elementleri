@@ -806,7 +806,7 @@ footer {
     h1.hero-line {
         margin-top: -1%;
         font-size: 9vw;
-        font-weight: var(--font-bold);
+        font-weight: var(--font-medium);
         white-space: nowrap;
     }
 
