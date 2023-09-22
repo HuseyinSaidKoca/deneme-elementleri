@@ -18,6 +18,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
         if(data.success) {
             submitButton.textContent = "Gönderildi!";
         } else {
+            console.log(data)
             submitButton.textContent = "Tekrar Deneyin!";
         }
         // 3 saniye bekledikten sonra butonun yazısını geri değiştir
