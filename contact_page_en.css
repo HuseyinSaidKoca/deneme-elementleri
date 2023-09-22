@@ -1,0 +1,946 @@
+:root {
+    --primary-color: #00476F;
+    /* Ana renk */
+    --secondary-color: #00AEEE;
+    /* İkincil renk */
+    --light-background-color: #d4e6f2a4;
+    /*mavi tonlu arkaplan rengi*/
+    --background-color: #FFFFFF;
+    /* Arka plan rengi */
+    --header-text-color: #282828;
+    /*Başlıktaki menü rengi*/
+    --text-color: #537480;
+    /* Metin rengi */
+    --footer-color: #DBDBDB;
+    /*footer border rengi*/
+    --link-color: #007BFF;
+    /* Bağlantı rengi */
+    --font-light: 300;
+    /* Light (hafif) yazı tipi ağırlığı */
+    --font-regular: 400;
+    /* Regular (normal) yazı tipi ağırlığı */
+    --font-medium: 500;
+    /* Medium (orta) yazı tipi ağırlığı */
+    --font-semibold: 600;
+    /* Semibold (yarım kalın) yazı tipi ağırlığı */
+    --font-bold: 700;
+    /* Bold (kalın) yazı tipi ağırlığı */
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin-ext */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDz8Z1JlFc-K.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin-ext */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJnecmNE.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin-ext */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLGT9Z1JlFc-K.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin-ext */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z1JlFc-K.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin-ext */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7Z1JlFc-K.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+/*      !HEADER!      */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    color: var(--header-text-color);
+    margin-top: 0px;
+    padding: 0 2%;
+    /* % olarak padding kullanımı */
+}
+
+.logo-header img {
+    margin-left: 3%;
+    margin-top: 1vw;
+    width: 6vw;
+    height: auto;
+}
+
+.header-menu-icon {
+    display: none;
+    margin-top: -4px;
+    /* Başlangıçta menü simgesini gizle */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 3px 2px;
+}
+
+.toggle-menu {
+    display: none;
+    /* Başlangıçta toggle menüyü gizle */
+    position: fixed;
+    top: 0;
+    margin: 0;
+    right: -43vw;
+    /* Ekranın %40'u kadar kaydırılmış */
+    height: 100vh;
+    /* Ekran yüksekliği kadar */
+    width: 43vw;
+    /* Ekranın %40'u kadar genişlik */
+    background-color: var(--primary-color);
+    color: #fff;
+    transition: right 0.3s;
+    /* Animasyon için geçiş süresi ekler */
+}
+
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+nav ul.header-menu {
+    list-style: none;
+    display: flex;
+    gap: 3.5vw;
+    margin-left: -7vw;
+}
+
+nav ul.header-menu li a {
+    text-decoration: none;
+    color: var(--header-text-color);
+    letter-spacing: 0.13vw;
+    font-weight: var(--font-semibold);
+    font-size: 0.85vw;
+}
+
+nav ul.header-menu li a.activePage {
+    text-decoration: none;
+    color: var(--secondary-color);
+    letter-spacing: 0.13vw;
+    font-weight: var(--font-semibold);
+    font-size: 0.85vw;
+}
+
+/* Diğer stiller burada yer alır */
+
+.flags {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    /* Bayrakları sağa hizala */
+}
+
+.flags a {
+    display: inline-block;
+    border-radius: 50%;
+    /* Dairesel şekil için border-radius kullanın */
+}
+
+.flags img {
+    width: 2.7vw;
+    height: 2.7vw;
+    /* Beyaz bir kenarlık ekleyebilirsiniz */
+    border-radius: 50%;
+    /* Bayrağı daire şeklinde yapar */
+}
+
+/*      !CONTACT SECTION!      */
+.contact {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 70vw;
+    height: 58vw;
+    margin-top: 2vw;
+    margin-bottom: 1vw;
+    margin-left: 13.5vw;
+}
+
+.contact-image {
+    /*resim*/
+    object-fit: cover;
+    height: 19.6vw;
+    border-radius: 1.3vw 1.3vw 0px 0px;
+}
+
+.info {
+    /*resmin altındaki tüm bölüm*/
+    height: 34vw;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.form {
+    /*form kısmı*/
+    height: 34vw;
+    width: 25.5vw;
+    background-color: var(--light-background-color);
+    color: var(--primary-color);
+    border-radius: 0px 0px 0px 1.3vw;
+    padding: 0.1vw 3.5vw;
+    align-items: baseline;
+    text-align: left;
+
+}
+
+.form-header {
+    display: flex;
+    font-size: 3.5vw;
+    font-weight: var(--font-semibold);
+    color: var(--primary-color);
+    margin-top: 2vw;
+    margin-bottom: 1.5vw;
+}
+
+.form-group {
+    text-align: left;
+    position: relative;
+    margin-bottom: 1vw;
+    /* Label'ları üst katman olarak konumlandırmak için */
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    font-size: 1vw;
+    color: var(--primary-color);
+    position: absolute;
+    /* Label'ları üst katman olarak konumlandırmak için */
+    top: -1.4vw;
+    /* Label'ları text box'ın üstünde göstermek için yukarı kaydırın */
+    left: 0.6vw;
+    /* Label'ları sola hizalamak için */
+    background-color: transparent;
+    /* Arka planı temizlemek için */
+    padding: 0.6vw 5px;
+    /* Label'ları daha okunaklı hale getirmek için boşluk ekleyin */
+    transition: top 0.3s ease;
+    /* Geçiş efekti ekleyin */
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+    width: 22.2vw;
+    height: 1.8vw;
+    background-color: transparent;
+    padding: 10px;
+    font-weight: var(--font-semibold);
+    border: 0.2vw solid var(--background-color);
+    border-radius: 0.6vw;
+}
+
+/* Label'ların aktif durumunda yukarı kaydırmasını sağlayın */
+.form-group input:focus+label,
+.form-group input:valid+label {
+    font-family: "Poppins", sans-serif;
+    font-weight: var(--font-semibold);
+    color: var(--primary-color);
+    border-color: var(--background-color);
+    top: -20px;
+    font-size: 1vw;
+    /* İsteğe bağlı olarak daha küçük bir yazı tipi ekleyebilirsiniz */
+}
+
+.form-group button {
+    background: linear-gradient(to right, var(--secondary-color), #0075B6);
+    color: #fff;
+    padding: 0.7vw 4vw;
+    border: none;
+    border-radius: 0.8vw;
+    font-family: Poppins;
+    letter-spacing: 0.1vw;
+    margin-left: 5.1vw;
+    font-size: 1.2vw;
+    font-weight: var(--font-semibold);
+    cursor: pointer;
+    margin-top: 2.5vw;
+    transition: box-shadow 0.5s ease;
+}
+
+.form-group button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.contact-info-container {
+    display: flex;
+    flex-direction: column;
+    height: 31vw;
+    width: 34.5vw;
+    background-color: var(--background-color);
+    padding: 2.5vw 4.5vw;
+    text-align: left;
+}
+
+.contact-header {
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    text-align: left;
+    font-size: 2vw;
+    font-weight: var(--font-semibold);
+    margin-bottom: 0.2vw
+}
+
+.divider {
+    width: 5vw;
+    height: 0.15vw;
+    background-color: var(--primary-color);
+    margin: 0 0.8vw;
+}
+
+.contact-info {
+    color: var(--primary-color);
+    width: 27vw;
+    text-align: left;
+    font-size: 1.3vw;
+    font-weight: var(--font-semibold);
+    margin-bottom: 1.8vw;
+}
+
+.info-item {
+    display: flex;
+    margin-bottom: 0.7vw;
+    align-items: center;
+    letter-spacing: 0.05vw;
+}
+
+.info-item:nth-child(1) {
+    display: flex;
+    margin-bottom: 0.7vw;
+    align-items: flex-start;
+}
+
+.info-icon {
+    margin-right: 0.7vw;
+    margin-left: 0.3vw;
+}
+
+.info-item:nth-child(1) .info-icon i {
+    margin-right: -0.3vw;
+    margin-left: -0.6vw;
+    font-size: 2.8vw;
+    /* Adres ikon boyutu */
+}
+
+.info-item:nth-child(2) .info-icon i {
+    font-size: 2.1vw;
+    /* Whatsapp ikon boyutu */
+}
+
+.info-item:nth-child(3) .info-icon i {
+    font-size: 1.8vw;
+    /* Mail ikon boyutu */
+}
+
+.info-text p {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.service-info {
+    color: var(--primary-color);
+    width: 45vw;
+    font-weight: var(--font-semibold);
+    align-items: baseline;
+}
+
+/* Her hizmet öğesi */
+.service-item {
+    display: inline-block;
+    width: 11vw;
+    /* İstedğiniz genişlik */
+    text-align: center;
+    margin-top: 1vw;
+    /* Aralık eklemek için */
+    align-items: baseline;
+}
+
+/* İkonlar */
+.service-icon {
+    white-space: nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    /* İkon arkaplan rengi */
+    color: var(--background-color);
+    /* İkon rengi */
+    width: 5vw;
+    /* İkon konteynerinin genişliği */
+    height: 5vw;
+    /* İkon konteynerinin yüksekliği */
+    border-radius: 50%;
+    /* İkon konteynerini daire şeklinde yapar */
+    line-height: 5vw;
+    /* İkonu dikeyde ortalar */
+    margin: 0 auto;
+    /* İkonu yatayda ortalar */
+    font-size: 2.3vw;
+}
+
+.material-symbols-outlined {
+    font-weight: lighter;
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 100,
+        'GRAD' 0,
+        'opsz' 0
+}
+
+/* Hizmet ismi */
+.service-name {
+    margin-top: 0.4vw;
+    /* Boşluk eklemek için */
+    font-size: 1.3vw;
+}
+
+/*      !FOOTER!      */
+/* Footerı stilize etmek için CSS kuralları */
+footer {
+    background-color: var(--background-color);
+    /* Footer arkaplan rengi */
+    color: var(--primary-color);
+    /* Metin rengi */
+    border-top: 1px solid lightgray;
+    display: flex;
+    flex-direction: row;
+    /* İçerikleri yatay olarak hizalar */
+    justify-content: space-between;
+    /* İçerikleri sola ve sağa yay */
+    align-items: center;
+    /* İçerikleri dikey olarak hizala */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4.2vw;
+    font-size: 1.4vw
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 3vw;
+}
+
+.footer-left img {
+    width: 4vw;
+    /* Logo resmi genişliği */
+    height: auto;
+    /* Otomatik yükseklik ayarla */
+    margin-right: 0.2vw;
+    margin-bottom: 0.2vw;
+    /* Logo ile marka ismi arasındaki boşluk */
+}
+
+.footer-marka-ismi {
+    font-weight: var(--font-bold);
+    /* Marka ismini kalın yap */
+}
+
+.footer-right p {
+    font-weight: var(--font-bold);
+    margin-right: 2vw;
+    /* Paragrafın içerikten boşluğunu kaldır */
+}
+
+@media screen and (max-width: 675px) {
+
+    /*      !HEADER!      */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--background-color);
+        color: var(--header-text-color);
+        margin-top: 3px;
+        padding: 1% 2%;
+        /* % olarak padding kullanımı */
+    }
+
+    .logo-header {
+        order: 1;
+        /* Logo, menü ikonunun önüne gelir */
+    }
+
+    .header-menu-icon {
+        display: flex;
+        margin-right: 1vw;
+        /* Mobilde menü simgesini göster */
+        order: 3;
+        /* Menü simgesi, logonun arkasına gelir */
+    }
+
+    .toggle-menu {
+        display: block;
+        /* Mobilde toggle menüyü göster */
+        /* Ekranın sağ tarafından sola kaydır */
+    }
+
+    .toggle-menu ul {
+        list-style: none;
+        margin-top: 18vw;
+        line-height: 2.7;
+    }
+
+    .toggle-menu ul li a {
+        text-decoration: none;
+        color: var(--background-color);
+        letter-spacing: 0.3vw;
+        font-weight: var(--font-medium);
+        font-size: 3.5vw;
+    }
+
+    .toggle-menu ul li a.activePage {
+        text-decoration: none;
+        color: var(--secondary-color);
+        letter-spacing: 0.3vw;
+        font-weight: var(--font-medium);
+        font-size: 3.5vw;
+    }
+
+    .close-icon {
+        display: block;
+        /* Mobilde kapatma ikonunu göster */
+    }
+
+    .flags {
+        order: 2;
+        /* Bayraklar, menü ikonunun arkasına gelir */
+        margin-left: 44vw;
+    }
+
+    .flags img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .logo-header img {
+        margin-left: 1vw;
+        width: 15vw;
+        height: auto;
+    }
+
+    nav {
+        display: none;
+        /* Menüyü gizle */
+        background-color: #666666;
+        position: absolute;
+        top: 10px;
+        right: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    nav.active {
+        display: flex;
+        /* Menüyü mobilde göster */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-menu.active li {
+        padding: 10px;
+        text-align: center;
+    }
+
+    /*      !CONTACT SECTION!      */
+    .contact {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        width: 85vw;
+        height: 210vw;
+        margin-top: 5vw;
+        margin-bottom: 1vw;
+        margin-left: 7.4vw;
+    }
+
+    .contact-image {
+        /*resim*/
+        object-fit: cover;
+        height: 45vw;
+        border-radius: 5vw 5vw 0px 0px;
+    }
+
+    .info {
+        /*resmin altındaki tüm bölüm*/
+        width: 85vw;
+        height: 120vw;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .form {
+        /*form kısmı*/
+        height: 70vw;
+        width: 67vw;
+        background-color: var(--light-background-color);
+        color: var(--primary-color);
+        border-radius: 0px 0px 5vw 5vw;
+        padding: 2vw 9vw;
+        align-items: baseline;
+        text-align: left;
+
+    }
+
+    .form-header {
+        display: flex;
+        font-size: 8.2vw;
+        font-weight: var(--font-semibold);
+        color: var(--primary-color);
+        margin-top: 0vw;
+        margin-bottom: 1.8vw;
+    }
+
+    .form-group {
+        text-align: left;
+        position: relative;
+        margin-bottom: 4.5vw;
+        /* Label'ları üst katman olarak konumlandırmak için */
+    }
+
+    .form-group label {
+        display: block;
+        font-weight: bold;
+        font-size: 2.4vw;
+        color: var(--primary-color);
+        position: absolute;
+        /* Label'ları üst katman olarak konumlandırmak için */
+        top: -2.8vw;
+        /* Label'ları text box'ın üstünde göstermek için yukarı kaydırın */
+        left: 1.5vw;
+        /* Label'ları sola hizalamak için */
+        background-color: transparent;
+        /* Arka planı temizlemek için */
+        padding: 0.6vw 5px;
+        /* Label'ları daha okunaklı hale getirmek için boşluk ekleyin */
+        transition: top 0.3s ease;
+        /* Geçiş efekti ekleyin */
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"] {
+        width: 55vw;
+        height: 3.5vw;
+        background-color: transparent;
+        padding: 10px;
+        font-weight: var(--font-semibold);
+        border: 0.6vw solid var(--background-color);
+        border-radius: 2.1vw;
+    }
+
+    /* Label'ların aktif durumunda yukarı kaydırmasını sağlayın */
+    .form-group input:focus+label,
+    .form-group input:valid+label {
+        font-family: "Poppins", sans-serif;
+        font-weight: var(--font-semibold);
+        color: var(--primary-color);
+        border-color: var(--background-color);
+        top: -20px;
+        font-size: 1vw;
+        /* İsteğe bağlı olarak daha küçük bir yazı tipi ekleyebilirsiniz */
+    }
+
+    .form-group button {
+        background: linear-gradient(to right, var(--secondary-color), #0075B6);
+        color: #fff;
+        padding: 1.8vw 9vw;
+        border: none;
+        border-radius: 2.3vw;
+        font-family: Poppins;
+        letter-spacing: 0.3vw;
+        margin-left: 15.5vw;
+        font-size: 3.3vw;
+        font-weight: var(--font-semibold);
+        cursor: pointer;
+        margin-top: 3vw;
+        margin-bottom: 1vw;
+        transition: box-shadow 0.5s ease;
+    }
+
+    .contact-info-container {
+        /*iletişim ve hizmet bilgileri kutusu*/
+        display: flex;
+        flex-direction: column;
+        height: 38.5vw;
+        width: 80vw;
+        background-color: var(--background-color);
+        padding: 6vw 8vw;
+        padding-right: 3vw;
+        text-align: left;
+    }
+
+    .contact-header {
+        color: var(--primary-color);
+        display: flex;
+        align-items: center;
+        text-align: left;
+        font-size: 6vw;
+        font-weight: var(--font-semibold);
+        margin-bottom: 0.2vw
+    }
+
+    .divider {
+        width: 13vw;
+        height: 0.4vw;
+        background-color: var(--primary-color);
+        margin: 0 2vw;
+    }
+
+    .contact-info {
+        /*adres, telefon, e-posta bilgileri*/
+        color: var(--primary-color);
+        width: 68vw;
+        text-align: left;
+        font-size: 4vw;
+        font-weight: var(--font-semibold);
+        margin-bottom: 5vw;
+    }
+
+    .info-item {
+        display: flex;
+        margin-bottom: 1vw;
+        align-items: center;
+        letter-spacing: 0.1vw;
+    }
+
+    .info-item:nth-child(1) {
+        display: flex;
+        margin-bottom: 2.5vw;
+        align-items: flex-start;
+    }
+
+    .info-icon {
+        margin-right: 0.7vw;
+        margin-left: 0.3vw;
+    }
+
+    .info-item:nth-child(1) .info-icon i {
+        margin-right: -0.8vw;
+        margin-left: -1.5vw;
+        font-size: 7vw;
+        /* Adres ikon boyutu */
+    }
+
+    .info-item:nth-child(2) .info-icon i {
+        font-size: 5vw;
+        /* Whatsapp ikon boyutu */
+    }
+
+    .info-item:nth-child(3) .info-icon i {
+        font-size: 4.6vw;
+        /* Mail ikon boyutu */
+    }
+
+    .info-text p {
+        margin: 0;
+        color: var(--primary-color);
+    }
+
+    .service-info {
+        color: var(--primary-color);
+        width: 83vw;
+        font-weight: var(--font-semibold);
+        align-items: baseline;
+    }
+
+    /* Her hizmet öğesi */
+    .service-item {
+        display: inline-block;
+        width: 26vw;
+        /* İstedğiniz genişlik */
+        text-align: center;
+        margin-top: 2vw;
+        /* Aralık eklemek için */
+        align-items: baseline;
+    }
+
+    /* İkonlar */
+    .service-icon {
+        white-space: nowrap;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--primary-color);
+        /* İkon arkaplan rengi */
+        color: var(--background-color);
+        /* İkon rengi */
+        width: 15vw;
+        /* İkon konteynerinin genişliği */
+        height: 15vw;
+        /* İkon konteynerinin yüksekliği */
+        border-radius: 50%;
+        /* İkon konteynerini daire şeklinde yapar */
+        line-height: 15vw;
+        /* İkonu dikeyde ortalar */
+        margin: 0 auto;
+        /* İkonu yatayda ortalar */
+        font-size: 7vw;
+    }
+
+    .material-symbols-outlined {
+        font-weight: lighter;
+        font-variation-settings:
+            'FILL' 0,
+            'wght' 100,
+            'GRAD' 0,
+            'opsz' 0
+    }
+
+    /* Hizmet ismi */
+    .service-name {
+        margin-top: 0.4vw;
+        /* Boşluk eklemek için */
+        font-size: 3.2vw;
+    }
+
+    /*      !FOOTER!      */
+    /* Footerı stilize etmek için CSS kuralları */
+    footer {
+        background-color: var(--background-color);
+        /* Footer arkaplan rengi */
+        color: var(--primary-color);
+        /* Metin rengi */
+        border-top: 1px solid lightgray;
+        display: flex;
+        flex-direction: row;
+        /* İçerikleri yatay olarak hizalar */
+        justify-content: space-between;
+        /* İçerikleri sola ve sağa yay */
+        align-items: center;
+        /* İçerikleri dikey olarak hizala */
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 10vw;
+        font-size: 3vw
+    }
+
+    .footer-left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 3vw;
+    }
+
+    .footer-left img {
+        width: 8vw;
+        /* Logo resmi genişliği */
+        height: auto;
+        /* Otomatik yükseklik ayarla */
+        margin-right: 0.2vw;
+        margin-bottom: 0.2vw;
+        /* Logo ile marka ismi arasındaki boşluk */
+    }
+
+    .footer-marka-ismi {
+        font-weight: var(--font-bold);
+        /* Marka ismini kalın yap */
+    }
+
+    .footer-right p {
+        font-weight: var(--font-bold);
+        margin-right: 2vw;
+        /* Paragrafın içerikten boşluğunu kaldır */
+    }
+}
