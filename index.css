@@ -537,7 +537,7 @@ h2.our-service-header {
     font-size: 1vw;
     font-weight: var(--font-medium);
     color: var(--text-color);
-    text-align: justify;
+    text-align: left;
     line-height: 1.9vw;
     width: 31vw;
     text-wrap: wrap;
@@ -1015,6 +1015,7 @@ footer {
         font-size: 3.6vw;
         line-height: 6vw;
         color: var(--text-color);
+        text-align: justify;
         width: 72vw;
         text-wrap: wrap;
     }
