@@ -311,7 +311,9 @@ nav ul.header-menu li a.activePage {
     line-height: 2vw;
     /* Başlık ile resimler arasına boşluk ekledik */
 }
-
+.gallery-header h2 {
+    font-weight: var(--font-semibold);
+}
 
 .content {
     display: flex;
@@ -581,7 +583,10 @@ footer {
         line-height: 5vw;
         /* Başlık ile resimler arasına boşluk ekledik */
     }
-
+    .gallery-header h2 {
+        font-weight: var(--font-semibold);
+    }
+    
     .left-content {
         padding: 0vw 0.6vw;
         /* Sol içerik stilini güncelle */
