@@ -276,6 +276,7 @@ nav ul.header-menu li a.activePage {
 h1.hero-line {
     margin-top: -1%;
     font-size: 5.2vw;
+    font-weight: var(--font-medium);
     white-space: nowrap;
 }
 
@@ -530,7 +531,6 @@ h2.our-service-header {
     line-height: 4.2vw;
     color: var(--primary-color);
     font-weight: var(--font-semibold);
-    margin-bottom: 6vw;
 }
 .team-text p{
     font-size: 1vw;
