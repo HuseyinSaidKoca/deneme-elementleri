@@ -8,6 +8,7 @@
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" type="text/css" href="contact_page.css">
     <script src="toggle_menu.js"></script>
+    <script src="send_mail.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
@@ -55,7 +56,7 @@
         <div class="info">
             <div class="form">
                 <div class="form-header">Bize Ulaşın</div>
-                <form action="https://serene-hollows-63271-b652bb3b252a.herokuapp.com/index.php" method="POST">
+                <form id="contactForm">
                     <div class="form-group">
                         <label for="adsoyad">AD & SOYAD</label>
                         <input type="text" id="adsoyad" name="adsoyad" required>
@@ -69,7 +70,7 @@
                         <input type="tel" id="telefon" name="telefon" required>
                     </div>
                     <div class="form-group">
-                        <button type="submit">GÖNDER</button>
+                        <button type="submit" id="submitButton">GÖNDER</button>
                     </div>
                 </form>
             </div>
