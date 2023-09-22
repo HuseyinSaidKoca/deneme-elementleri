@@ -383,6 +383,7 @@ p.tag-line {
 
 h2.our-service-header {
     font-size: 2vw;
+    font-weight: var(--font-semibold);
     margin-bottom: 2.5vw;
 }
 
