@@ -389,7 +389,7 @@ nav ul.header-menu li a.activePage {
 
 .contact-info {
     color: var(--primary-color);
-    width: 23vw;
+    width: 27vw;
     text-align: left;
     font-size: 1.3vw;
     font-weight: var(--font-semibold);
@@ -789,7 +789,7 @@ footer {
     .contact-info {
         /*adres, telefon, e-posta bilgileri*/
         color: var(--primary-color);
-        width: 66vw;
+        width: 68vw;
         text-align: left;
         font-size: 4vw;
         font-weight: var(--font-semibold);
