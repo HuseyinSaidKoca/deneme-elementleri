@@ -4,31 +4,67 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
 <url>
-  <loc>https://godentalclinic.vercel.app/</loc>
-  <lastmod>2023-09-21T22:28:45+00:00</lastmod>
+  <loc>https://godentalclinic.pages.dev/</loc>
+  <lastmod>2023-09-23T01:33:38+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://godentalclinic.vercel.app/about_us_page.html</loc>
-  <lastmod>2023-09-21T22:28:45+00:00</lastmod>
+  <loc>https://godentalclinic.pages.dev/about_us_page</loc>
+  <lastmod>2023-09-23T01:33:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://godentalclinic.vercel.app/services_page.html</loc>
-  <lastmod>2023-09-21T22:28:45+00:00</lastmod>
+  <loc>https://godentalclinic.pages.dev/services_page</loc>
+  <lastmod>2023-09-23T01:33:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://godentalclinic.vercel.app/contact_page.html</loc>
-  <lastmod>2023-09-21T22:28:45+00:00</lastmod>
+  <loc>https://godentalclinic.pages.dev/contact_page</loc>
+  <lastmod>2023-09-23T01:33:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://godentalclinic.vercel.app/index.html</loc>
-  <lastmod>2023-09-21T22:28:45+00:00</lastmod>
+  <loc>https://godentalclinic.pages.dev/index_en</loc>
+  <lastmod>2023-09-23T01:33:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://godentalclinic.pages.dev/index_de</loc>
+  <lastmod>2023-09-23T01:33:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://godentalclinic.pages.dev/about_us_page_en</loc>
+  <lastmod>2023-09-23T01:33:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://godentalclinic.pages.dev/about_us_page_de</loc>
+  <lastmod>2023-09-23T01:33:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://godentalclinic.pages.dev/services_page_en</loc>
+  <lastmod>2023-09-23T01:33:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://godentalclinic.pages.dev/services_page_de</loc>
+  <lastmod>2023-09-23T01:33:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://godentalclinic.pages.dev/contact_page_en</loc>
+  <lastmod>2023-09-23T01:33:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://godentalclinic.pages.dev/contact_page_de</loc>
+  <lastmod>2023-09-23T01:33:38+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
