@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" type="text/css" href="contact_page.css">
+    <script src="toggle_menu.js"></script>
+    <script src="send_mail.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <title>Kontakt - GO Dental Clinic | Kontaktinformationen der Zahnklinik in Kuşadası</title>
+    <meta name="description"
+        content="Kontaktinformationen für die GO Dental Clinic in Kuşadası. Kontaktieren Sie uns für Zahnbehandlungen, Terminvereinbarungen und andere Anliegen. Unser erfahrenes Team steht Ihnen zur Verfügung.">
+    <meta name="keywords"
+        content="GO Dental Clinic Kontakt, Adresse der Zahnklinik in Kuşadası, Telefonnummer der Zahnklinik, Dentaler Kontakt in Kuşadası, Zahnarzttermin, Kontaktinformationen der Zahnklinik in Aydın">
+</head>
+
+<body>
+    <header>
+        <div class="logo-header">
+            <img src="images/logo.webp" alt="GO Dental Clinic Logo">
+        </div>
+        <div class="header-menu-icon" id="menuIcon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav class="toggle-menu" id="toggleMenu">
+            <span class="close-icon" id="closeIcon">&times;</span>
+            <ul>
+                <li><a href="index_de.html">STARTSEITE</a></li>
+                <li><a href="about_us_page_de.html">ÜBER UNS</a></li>
+                <li><a href="services_page_de.html">UNSERE LEISTUNGEN</a></li>
+                <li><a class="activePage" href="#">TERMIN & KONTAKT</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul class="header-menu">
+                <li><a href="index_de.html">STARTSEITE</a></li>
+                <li><a href="about_us_page_de.html">ÜBER UNS</a></li>
+                <li><a href="services_page_de.html">UNSERE LEISTUNGEN</a></li>
+                <li><a class="activePage" href="#">TERMIN & KONTAKT</a></li>
+            </ul>
+        </nav>
+        <div class="flags">
+            <a href="contact_page.html"><img src="images/turkish_flag.webp" alt="Turkish Übersetzung"></a>
+            <a href="contact_page_en.html"><img src="images/english_flag.webp" alt="English Übersetzung"></a>
+        </div>
+    </header>
+    <div class="contact">
+        <img class="contact-image" src="images/contact_image.webp" alt="Klinik Resmi">
+        <div class="info">
+            <div class="form">
+                <div class="form-header">Kontakt</div>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="adsoyad">NAME & NACHNAME</label>
+                        <input type="text" id="adsoyad" name="adsoyad" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-MAIL</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefon">TELEFON</label>
+                        <input type="tel" id="telefon" name="telefon" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" id="sendMailButton">SENDEN</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="contact-info-container">
+                <div class="contact-header">
+                    KONTAKTINFO
+                    <div class="divider"></div>
+                </div>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="material-icons-outlined">
+                                place
+                            </i>
+                        </div>
+                        <div class="info-text">
+                            <p>Ege Mah. Turgut Özal Bulv. Nr:98/2 D:10 Kuşadası-Aydın</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fab fa-whatsapp"></i> <!-- Font Awesome Icon -->
+                        </div>
+                        <div class="info-text">
+                            <p>+90 530 411 7993</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="far fa-envelope"></i> <!-- Font Awesome Icon -->
+                        </div>
+                        <div class="info-text">
+                            <p>info@godental.clinic</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-header">
+                    UNSERE LEISTUNGEN
+                    <div class="divider"></div>
+                </div>
+                <div class="service-info">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-taxi"></i> <!-- Beispiel Icon (Font Awesome) -->
+                        </div>
+                        <div class="service-name">
+                            VIP Transfer
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-hotel"></i> <!-- Beispiel Icon (Font Awesome) -->
+                        </div>
+                        <div class="service-name">
+                            Unterkunft
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-user-md"></i> <!-- Beispiel Icon (Font Awesome) -->
+                        </div>
+                        <div class="service-name">
+                            Expertenteam
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <footer>
+        <div class="footer-left">
+            <img src="images/logo.webp" alt="Logo">
+            <div class="footer-marka-ismi">Dental Clinic</div>
+        </div>
+        <div class="footer-right">
+            <p>Alle Rechte vorbehalten &copy; 2023</p>
+        </div>
+    </footer>
+</body>
+
+</html>
