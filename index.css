@@ -630,6 +630,31 @@ h2.our-service-header {
     /* Resimlerin yüksekliğini 100% olarak ayarla */
 }
 
+/*      !VIDEO SECTION!      */
+.video {
+    flex: 1;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--background-color);
+    text-align: center;
+    padding-bottom: 2.2vw;
+
+}
+
+/* Galeri başlığının stilini güncelle */
+.video-header {
+    color: var(--primary-color);
+    font-size: 1.5vw;
+    padding: 0.1vw 0vw;
+    line-height: 2vw;
+    /* Başlık ile resimler arasına boşluk ekledik */
+}
+
+.video-header h2 {
+    font-weight: var(--font-semibold);
+}
+
+
 /*      !FOOTER!      */
 /* Footerı stilize etmek için CSS kuralları */
 footer {
@@ -1110,6 +1135,30 @@ footer {
         padding: 0.2vw 0.8vw;
     }
     
+    /*      !VIDEO SECTION!      */
+    .video {
+        flex: 1;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--background-color);
+        text-align: center;
+        padding-bottom: 7vw;
+    }
+
+    /* Galeri başlığının stilini güncelle */
+    .video-header {
+        color: var(--primary-color);
+        font-size: 4.5vw;
+        font-weight: var(--font-semibold);
+        padding: 0.1vw 0vw;
+        line-height: 5vw;
+        /* Başlık ile resimler arasına boşluk ekledik */
+    }
+
+    .video-header h2{
+        font-weight: var(--font-semibold);
+    }
+
     /*      !FOOTER!      */
     /* Footerı stilize etmek için CSS kuralları */
     footer {
