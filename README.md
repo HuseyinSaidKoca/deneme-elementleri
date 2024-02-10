@@ -21,7 +21,7 @@ Bu dosyalar, aynı isimli html dosyasının stillerini içerir. Renk, boyut, fon
 ## Değişiklik Yapıldığında
 Siteye güncel kod github reposunda yer almaktadır. Versiyon takibi açısından yeni ekleme ve geliştirme yapıldığında yine aynı şekilde github reposuna güncellemenin yüklenmesi büyük önem arz eder. Güncellemenin site üzerinde çalışmaya başlaması için **Google Cloud**'a yüklenmesi gerekmektedir. Bunun için sadece değişiklik yapılan resim, kod vb. dosyaların
 **Google Cloud > Console > Cloud Storage > Bucket > godental.clinic** 
-yolunu izleyerek buraya yüklenmesi gerekmektedir. Yükleme yapıldığında çıkan ekranda 
+yolunu izleyerek buraya yüklenmesi gerekmektedir. Yükleme yapıldığında çıkan ekranda "Overwriting Object" olan opsiyon seçilmelidir. Yükleme tamamlandığında değişiklik kısa bir süre sonra sitede çalışır hale gelecektir.
 
 
 
